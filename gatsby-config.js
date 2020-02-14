@@ -16,7 +16,7 @@ module.exports = {
     description: "Gatsby+Contentful for a website with a blog and a portfolio",
     author: "Emanuele Buccelli",
     twitterUsername: "@escapemanuele",
-    image: '/Studio-Associato-Fusignani.jpg',
+    image: '/index-hero.jpg',
     siteUrl: 'https://studioassociatofusignani.it'
   },
   plugins: [
