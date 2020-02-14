@@ -1,41 +1,50 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  An architect portfolio built with Gatsby and Contentful: http://www.studioassociatofusignani.it/
-</h1>
+# gatsby-contentful-blog-portfolio
 
-This is a simple project built for a local architect. It shows its portfolio and also has a blog.
+Gatsby [Contentful](https://www.contentful.com) starter for creating a portfolio with a blog, helpful for businesses o freelancers!
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/caf75181-f370-4f51-bb2b-78724a300f6a/deploy-status)](https://app.netlify.com/sites/gatsby-contentful-portfolio-blog/deploys)
 
-## 🚀 Quick start
+![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
 
-1.  **Clone the repository**
-
-    Use git to clone the repository.
-
-    ```sh
-    # clone the project using Git
-    gatsby clone https://github.com/escapemanuele/studioassociatofusignani  your-project-name
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd your-project-name
-    gatsby develop
-    ```
-
-3.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-
-    Feel free to change 
-    
+### [Give a look to the Demo ✨](https://gatsby-contentful-portfolio-blog.netlify.com/)
 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a46337b9-2b45-492c-8de3-da64485eebc3/deploy-status)](https://app.netlify.com/sites/studioassociatofusignani/deploys)
+## Features
+
+* Simple structure for a blog, with articles and categories, and a portfolio! All using Contentful!
+* [Gatsby v2](https://www.gatsbyjs.org/)
+* [Netlify](https://www.netlify.com) Deployment Friendly
+* Designed with styled-components
+* Graphql
+* Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
+
+## Requirements
+
+You just need a Contentful account. Create one at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
+
+## Getting started
+
+Install Yarn or Npm
+
+### Get the source code and install dependencies.
+
+```
+$ git clone git@github.com:contentful-userland/gatsby-contentful-starter.git
+$ npm install
+```
+
+Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
+
+```
+$ gatsby new contentful-starter https://github.com/contentful-userland/gatsby-contentful-starter
+```
+
+### Set up Contentful
+
+Just use `npm run setup`. It will guide you through the configuration.
+
+You can find the information requested in your Contentful space, in Settings -> API KEYS
+
+After that, the CLI will automatically starts copying all the necessary model into your space (also creating a new .env file)
+
+### Now just run: gatsby develop
