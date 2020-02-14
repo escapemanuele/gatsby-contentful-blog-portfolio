@@ -16,7 +16,7 @@ const RichTextDisplay = ({json}) => {
             "embedded-entry-block":(node)=> {
                 const {title, image, text} = node.data.target.fields
                 return <div>
-                    <h1>Articolo collegato: {title["en-US"]}</h1>
+                    <h1>Related article: {title["en-US"]}</h1>
                     <img width="400" src={image['en-US'].fields.file['en-US'].url} alt={title} />
                     {documentToReactComponents(text["en-US"])}
                 </div>

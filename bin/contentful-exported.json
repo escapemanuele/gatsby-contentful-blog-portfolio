@@ -1,0 +1,1424 @@
+{
+    "contentTypes": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "blogArticleCategory",
+          "type": "ContentType",
+          "createdAt": "2020-02-14T10:34:55.115Z",
+          "updatedAt": "2020-02-14T10:34:55.937Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 1,
+          "publishedAt": "2020-02-14T10:34:55.937Z",
+          "firstPublishedAt": "2020-02-14T10:34:55.937Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 2,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "displayField": "name",
+        "name": "BlogArticleCategory",
+        "description": "Category of your blog article",
+        "fields": [
+          {
+            "id": "name",
+            "name": "Name",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "description",
+            "name": "Description",
+            "type": "Text",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          }
+        ]
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "blogArticle",
+          "type": "ContentType",
+          "createdAt": "2020-02-14T10:38:19.372Z",
+          "updatedAt": "2020-02-14T10:38:19.825Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 1,
+          "publishedAt": "2020-02-14T10:38:19.825Z",
+          "firstPublishedAt": "2020-02-14T10:38:19.825Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 2,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "displayField": "title",
+        "name": "BlogArticle",
+        "description": "An article of your blog",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "image",
+            "name": "Image",
+            "type": "Link",
+            "localized": false,
+            "required": false,
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "content",
+            "name": "Content",
+            "type": "RichText",
+            "localized": false,
+            "required": false,
+            "validations": [
+              {
+                "nodes": {
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "date",
+            "name": "Date",
+            "type": "Date",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              },
+              {
+                "size": {
+                  "max": 50
+                },
+                "message": "Slug too long"
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "category",
+            "name": "Category",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkContentType": [
+                  "blogArticleCategory"
+                ],
+                "message": "An article needs a category"
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Entry"
+          }
+        ]
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "portfolioItem",
+          "type": "ContentType",
+          "createdAt": "2020-02-14T10:40:01.140Z",
+          "updatedAt": "2020-02-14T10:42:09.042Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2020-02-14T10:42:09.042Z",
+          "firstPublishedAt": "2020-02-14T10:40:01.827Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 4,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "displayField": "title",
+        "name": "PortfolioItem",
+        "description": "An element of your portfolio",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "description",
+            "name": "Description",
+            "type": "Text",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "images",
+            "name": "Images",
+            "type": "Array",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "items": {
+              "type": "Link",
+              "validations": [
+                {
+                  "linkMimetypeGroup": [
+                    "image"
+                  ]
+                }
+              ],
+              "linkType": "Asset"
+            }
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              },
+              {
+                "size": {
+                  "max": 50
+                },
+                "message": "Slug too long"
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "category",
+            "name": "Category",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkContentType": [
+                  "portfolioItemCategory"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Entry"
+          }
+        ]
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "portfolioItemCategory",
+          "type": "ContentType",
+          "createdAt": "2020-02-14T10:41:43.142Z",
+          "updatedAt": "2020-02-14T11:13:52.770Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2020-02-14T11:13:52.770Z",
+          "firstPublishedAt": "2020-02-14T10:41:43.712Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 4,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "displayField": "title",
+        "name": "PortfolioItemCategory",
+        "description": "Your portfolio item category",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "image",
+            "name": "Image",
+            "type": "Link",
+            "localized": false,
+            "required": false,
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "unique": true
+              },
+              {
+                "size": {
+                  "max": 50
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "description",
+            "name": "Description",
+            "type": "Text",
+            "localized": false,
+            "required": false,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          }
+        ]
+      }
+    ],
+    "editorInterfaces": [
+      {
+        "sys": {
+          "id": "default",
+          "type": "EditorInterface",
+          "space": {
+            "sys": {
+              "id": "pzlsnnzc6vdk",
+              "type": "Link",
+              "linkType": "Space"
+            }
+          },
+          "version": 2,
+          "createdAt": "2020-02-14T10:34:55.994Z",
+          "createdBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "updatedAt": "2020-02-14T10:34:57.376Z",
+          "updatedBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "id": "blogArticleCategory",
+              "type": "Link",
+              "linkType": "ContentType"
+            }
+          },
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "controls": [
+          {
+            "fieldId": "name",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "description",
+            "widgetId": "markdown",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "slug",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          }
+        ]
+      },
+      {
+        "sys": {
+          "id": "default",
+          "type": "EditorInterface",
+          "space": {
+            "sys": {
+              "id": "pzlsnnzc6vdk",
+              "type": "Link",
+              "linkType": "Space"
+            }
+          },
+          "version": 2,
+          "createdAt": "2020-02-14T10:38:19.899Z",
+          "createdBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "updatedAt": "2020-02-14T10:38:20.639Z",
+          "updatedBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "id": "blogArticle",
+              "type": "Link",
+              "linkType": "ContentType"
+            }
+          },
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "controls": [
+          {
+            "fieldId": "title",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "image",
+            "widgetId": "assetLinkEditor",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "content",
+            "widgetId": "richTextEditor",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "date",
+            "widgetId": "datePicker",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "slug",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "category",
+            "widgetId": "entryLinkEditor",
+            "widgetNamespace": "builtin"
+          }
+        ]
+      },
+      {
+        "sys": {
+          "id": "default",
+          "type": "EditorInterface",
+          "space": {
+            "sys": {
+              "id": "pzlsnnzc6vdk",
+              "type": "Link",
+              "linkType": "Space"
+            }
+          },
+          "version": 4,
+          "createdAt": "2020-02-14T10:40:01.913Z",
+          "createdBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "updatedAt": "2020-02-14T10:42:09.867Z",
+          "updatedBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "id": "portfolioItem",
+              "type": "Link",
+              "linkType": "ContentType"
+            }
+          },
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "controls": [
+          {
+            "fieldId": "title",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "description",
+            "widgetId": "markdown",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "images",
+            "widgetId": "assetLinksEditor",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "slug",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "category",
+            "widgetId": "entryLinkEditor",
+            "widgetNamespace": "builtin"
+          }
+        ]
+      },
+      {
+        "sys": {
+          "id": "default",
+          "type": "EditorInterface",
+          "space": {
+            "sys": {
+              "id": "pzlsnnzc6vdk",
+              "type": "Link",
+              "linkType": "Space"
+            }
+          },
+          "version": 4,
+          "createdAt": "2020-02-14T10:41:43.773Z",
+          "createdBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "updatedAt": "2020-02-14T11:13:53.579Z",
+          "updatedBy": {
+            "sys": {
+              "id": "4bPoEEoaTcitSorAU9HR23",
+              "type": "Link",
+              "linkType": "User"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "id": "portfolioItemCategory",
+              "type": "Link",
+              "linkType": "ContentType"
+            }
+          },
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          }
+        },
+        "controls": [
+          {
+            "fieldId": "title",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "image",
+            "widgetId": "assetLinkEditor",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "slug",
+            "widgetId": "singleLine",
+            "widgetNamespace": "builtin"
+          },
+          {
+            "fieldId": "description",
+            "widgetId": "markdown",
+            "widgetNamespace": "builtin"
+          }
+        ]
+      }
+    ],
+    "entries": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "3R3ckSJGZMg9VutX1YmlSJ",
+          "type": "Entry",
+          "createdAt": "2020-02-14T11:14:13.848Z",
+          "updatedAt": "2020-02-14T11:16:51.224Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 26,
+          "publishedAt": "2020-02-14T11:16:51.224Z",
+          "firstPublishedAt": "2020-02-14T11:16:51.224Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 27,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "portfolioItemCategory"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Ecommerce"
+          },
+          "image": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "MH4bfaR4UtAmuytYN96T2"
+              }
+            }
+          },
+          "slug": {
+            "en-US": "ecommerce"
+          },
+          "description": {
+            "en-US": "I build stores for everything"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "3ziVACmcgCrEJSIOduCjMk",
+          "type": "Entry",
+          "createdAt": "2020-02-14T11:17:04.086Z",
+          "updatedAt": "2020-02-14T11:18:10.059Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 34,
+          "publishedAt": "2020-02-14T11:18:10.059Z",
+          "firstPublishedAt": "2020-02-14T11:18:10.059Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 35,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "portfolioItem"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "RoboCommerce"
+          },
+          "description": {
+            "en-US": "An ecommerce where you can buy your dream robot"
+          },
+          "images": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Asset",
+                  "id": "Oo3YqLCPV2BfVYOElitEt"
+                }
+              }
+            ]
+          },
+          "slug": {
+            "en-US": "robocommerce"
+          },
+          "category": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3R3ckSJGZMg9VutX1YmlSJ"
+              }
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "7xEPxYwUkdi9IZLm9tgorB",
+          "type": "Entry",
+          "createdAt": "2020-02-14T11:18:16.661Z",
+          "updatedAt": "2020-02-14T11:18:41.985Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 21,
+          "publishedAt": "2020-02-14T11:18:41.985Z",
+          "firstPublishedAt": "2020-02-14T11:18:41.985Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 22,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "blogArticleCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": {
+            "en-US": "React"
+          },
+          "description": {
+            "en-US": "Every article regarding React!"
+          },
+          "slug": {
+            "en-US": "react"
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "je2YVUdC6ZmsZPrzztPkx",
+          "type": "Entry",
+          "createdAt": "2020-02-14T11:18:51.948Z",
+          "updatedAt": "2020-02-14T11:20:20.797Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 29,
+          "publishedAt": "2020-02-14T11:20:20.797Z",
+          "firstPublishedAt": "2020-02-14T11:20:20.797Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 30,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "blogArticle"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "React is pretty nice Sir"
+          },
+          "image": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4IkpwuELIousYyXgXHiQDn"
+              }
+            }
+          },
+          "content": {
+            "en-US": {
+              "data": {
+              },
+              "content": [
+                {
+                  "data": {
+                  },
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "value": "React is nice",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-1"
+                },
+                {
+                  "data": {
+                  },
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "value": "",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {
+                  },
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "value": "I'm not paid to say this",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {
+                  },
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "value": "",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {
+                  },
+                  "content": [
+                    {
+                      "data": {
+                      },
+                      "marks": [
+                      ],
+                      "value": "Maybe",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                }
+              ],
+              "nodeType": "document"
+            }
+          },
+          "date": {
+            "en-US": "2020-02-14T00:00+01:00"
+          },
+          "slug": {
+            "en-US": "react-is-nice"
+          },
+          "category": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7xEPxYwUkdi9IZLm9tgorB"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "assets": [
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "MH4bfaR4UtAmuytYN96T2",
+          "type": "Asset",
+          "createdAt": "2020-02-14T11:14:18.374Z",
+          "updatedAt": "2020-02-14T11:16:22.973Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 18,
+          "publishedAt": "2020-02-14T11:16:22.973Z",
+          "firstPublishedAt": "2020-02-14T11:16:22.973Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 19,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "E-Commerce"
+          },
+          "description": {
+            "en-US": "I build nice stores"
+          },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/pzlsnnzc6vdk/MH4bfaR4UtAmuytYN96T2/ef6ab1c081a9a254c774c527db97eeb1/ecommerce.jpg",
+              "details": {
+                "size": 1465371,
+                "image": {
+                  "width": 6000,
+                  "height": 4000
+                }
+              },
+              "fileName": "ecommerce.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "Oo3YqLCPV2BfVYOElitEt",
+          "type": "Asset",
+          "createdAt": "2020-02-14T11:17:24.506Z",
+          "updatedAt": "2020-02-14T11:17:53.656Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 5,
+          "publishedAt": "2020-02-14T11:17:53.656Z",
+          "firstPublishedAt": "2020-02-14T11:17:53.656Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 6,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "Robot"
+          },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/pzlsnnzc6vdk/Oo3YqLCPV2BfVYOElitEt/d790289ab2685c73ae0fce5eb93ba34b/Atlas_from_boston_dynamics.jpg",
+              "details": {
+                "size": 50391,
+                "image": {
+                  "width": 640,
+                  "height": 960
+                }
+              },
+              "fileName": "Atlas_from_boston_dynamics.jpg",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "id": "4IkpwuELIousYyXgXHiQDn",
+          "type": "Asset",
+          "createdAt": "2020-02-14T11:19:33.541Z",
+          "updatedAt": "2020-02-14T11:20:01.918Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 15,
+          "publishedAt": "2020-02-14T11:20:01.918Z",
+          "firstPublishedAt": "2020-02-14T11:20:01.918Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 16,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          }
+        },
+        "fields": {
+          "title": {
+            "en-US": "React is nice"
+          },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/pzlsnnzc6vdk/4IkpwuELIousYyXgXHiQDn/e9c191b3e69991f17e6f87593bbe6c1b/react.jpg",
+              "details": {
+                "size": 33383,
+                "image": {
+                  "width": 640,
+                  "height": 640
+                }
+              },
+              "fileName": "Cosmic_Payback_Giant_Galaxy_Reacts_to_Being_Dumped_On",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      }
+    ],
+    "locales": [
+      {
+        "name": "English (United States)",
+        "code": "en-US",
+        "fallbackCode": null,
+        "default": true,
+        "contentManagementApi": true,
+        "contentDeliveryApi": true,
+        "optional": false,
+        "sys": {
+          "type": "Locale",
+          "id": "0HUzugVCl32HVqBjMtuvzg",
+          "version": 1,
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "pzlsnnzc6vdk"
+            }
+          },
+          "environment": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Environment",
+              "id": "master"
+            }
+          },
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "createdAt": "2020-02-14T10:31:31Z",
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "4bPoEEoaTcitSorAU9HR23"
+            }
+          },
+          "updatedAt": "2020-02-14T10:31:31Z"
+        }
+      }
+    ],
+    "webhooks": [
+    ],
+    "roles": [
+    ]
+  }

@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const Services = () => {
     return (
         <ServicesContainer>
-            <Title title="Studio di Architettura" subtitle="ed Ingegneria" />
+            <Title title="Study of architecture" subtitle="and Engineering" />
             <hr className="services_separator"/>
             <ServicesWrapper>
             {

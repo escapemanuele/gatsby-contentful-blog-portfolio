@@ -10,8 +10,8 @@ const Error = () => {
         <Layout>
             <header className={styles.error}>
                 <Banner
-                    title="Pagina non trovata">
-                        <Anilink fade to="/" className="btn-white">Torna alla pagina principale</Anilink>
+                    title="Page not found">
+                        <Anilink fade to="/" className="btn-white">Go back</Anilink>
                     </Banner>
             </header>
         </Layout>

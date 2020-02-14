@@ -12,8 +12,8 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Studio Associato Fusignani",
-    description: "Studio associato di architetti a Cervia",
+    title: "Gatsby starter for Contenful",
+    description: "Gatsby+Contentful for a website with a blog and a portfolio",
     author: "Emanuele Buccelli",
     twitterUsername: "@escapemanuele",
     image: '/Studio-Associato-Fusignani.jpg',

@@ -7,20 +7,20 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import styled from 'styled-components'
 import SEO from '../components/SEO'
 
-const StructureTemplate = ({data}) => {
+const PortfolioItemTemplate = ({data}) => {
 
-    const {titolo, images, descrizione, categoria: {indirizzo}} = data.structure
-    const {desc} = descrizione || {};
-    const [mainImage,...structureImages] = images
+    const {title, images, description, category: {slug}} = data.portfolioItem
+    const {desc} = description || {};
+    const [mainImage,...itemImages] = images
 
     return (
         <Layout>
-            <SEO title={titolo} description="Studio associato Fusignani" />
+            <SEO title={title} description={description} />
             <HeaderStructureWrapper>
-                <h1>{titolo}</h1>
+                <h1>{title}</h1>
                 <ImageWrapper>
                     <div className="img-container">
-                        <Image fluid={mainImage.fluid} alt="hotel a Cervia" />
+                        <Image fluid={mainImage.fluid} alt={title} />
                     </div>
                 </ImageWrapper>
             </HeaderStructureWrapper>
@@ -28,19 +28,18 @@ const StructureTemplate = ({data}) => {
                 <div className={styles.center}>
                     <div className={styles.images}>
                         {
-                            structureImages.map((item, index) => {
+                            itemImages.map((item, index) => {
                                 return <Image 
                                     key={index} 
                                     fluid={item.fluid} 
-                                    alt="vista della struttura" 
                                     className={styles.image} />
                             })
                         }
                     </div>
-                    <h2>{titolo}</h2>
+                    <h2>{title}</h2>
                     {desc && <p className={styles.desc}>{desc}</p>}
-                    <AniLink fade to={`/${indirizzo}`} className="btn-primary" style={{marginTop: '3rem'}} >
-                        torna a {indirizzo}
+                    <AniLink fade to={`/${slug}`} className="btn-primary" style={{marginTop: '3rem'}} >
+                        back to {slug}
                     </AniLink>
                 </div>
             </section>
@@ -100,23 +99,23 @@ const ImageWrapper = styled.article`
     }
 `
 
-export const getStructure = graphql`
-   query getStructure($id: String!) {
-        structure: contentfulStruttura(contentful_id: {eq: $id}) {
-            categoria {
-                indirizzo
+export const getPortfolioItem = graphql`
+   query getPortfolioItem($id: String!) {
+        portfolioItem: contentfulPortfolioItem(contentful_id: {eq: $id}) {
+            category {
+                slug
             }
-            titolo
+            title
             images {
                 fluid {
                     ...GatsbyContentfulFluid
                 }
             }
-            descrizione {
-                desc:descrizione
+            description {
+                desc:description
             }
         }
     }
 `
 
-export default StructureTemplate
+export default PortfolioItemTemplate

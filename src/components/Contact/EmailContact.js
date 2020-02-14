@@ -5,20 +5,20 @@ import styles from '../../css/contact.module.css'
 const EmailContact = () => {
     return (
         <section>
-            <Title title="Contattaci" subtitle="ora" />
+            <Title title="Contact us" subtitle="now" />
             <div c>
                 <form   
-                    action="https://formspree.io/studioassociatofusignani@gmail.com" 
+                    action="https://formspree.io/..." 
                     method="POST"
                     className={styles.form}>
                     <div>
-                        <label htmlFor="name">nome</label>
+                        <label htmlFor="name">name</label>
                         <input 
                             type="text" 
                             name="name"
                             id="name"
                             className={styles.formControl}
-                            placeholder="Il tuo nome" />
+                            placeholder="Your name" />
                     </div>
                     <div>
                         <label htmlFor="email">email</label>
@@ -30,18 +30,18 @@ const EmailContact = () => {
                             placeholder="email@email.com" />
                     </div>
                     <div>
-                        <label htmlFor="message">Messaggio</label>
+                        <label htmlFor="message">Message</label>
                         <textarea
                             name="message"
                             id="message"
                             rows="10"
                             className={styles.formControl}
-                            placeholder="La tua richiesta"/>
+                            placeholder="Your request"/>
                     </div>
                     <div>
                         <input
                             type="submit"
-                            value="Invia"
+                            value="Send"
                             className={styles.submit} />
                     </div>
                 </form>

@@ -10,6 +10,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "setup": "node ./bin/setup.js",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
@@ -37,6 +38,10 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "chalk": "^3.0.0",
+    "contentful-import": "^7.7.0",
+    "envfile": "^4.5.0",
+    "inquirer": "^7.0.4",
     "prettier": "^1.18.2"
   },
   "repository": {

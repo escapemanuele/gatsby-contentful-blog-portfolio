@@ -20,14 +20,14 @@ const BlogListTemplate = (props) => {
 
     return (
         <Layout>
-            <SEO title="Blog" description="Studio associato Fusignani" />
+            <SEO title="Blog"  />
             <section className={styles.blog}>
-                <Title title="ultimi" subtitle="articoli" />
+                <Title title="last" subtitle="articles" />
                 {!(isFirst && isLast) &&
                     <section className={styles.links}>
                         {
                             !isFirst && (
-                                <AniLink fade to={previousPage} className={styles.link}>Precedenti</AniLink>
+                                <AniLink fade to={previousPage} className={styles.link}>Previous</AniLink>
                             )
                         }
                         {Array.from({length:numPages}, (_,i) => {
@@ -42,7 +42,7 @@ const BlogListTemplate = (props) => {
                         })}
                         {
                             !isLast && (
-                                <AniLink fade to={nextPage} className={styles.link}>Successivi</AniLink>
+                                <AniLink fade to={nextPage} className={styles.link}>Next</AniLink>
                             )
                         }
                     </section>
@@ -60,18 +60,18 @@ const BlogListTemplate = (props) => {
 
 export const query = graphql`
     query getPosts($skip:Int!,$limit:Int!) {
-        posts:allContentfulArticolo (skip:$skip,limit:$limit,sort:{fields:data, order:DESC}) {
+        posts:allContentfulBlogArticle (skip:$skip,limit:$limit,sort:{fields:date, order:DESC}) {
             edges {
                 node {
-                    indirizzo
-                    titolo
                     id:contentful_id
-                    data
-                    categoria {
-                        nome
-                        indirizzo
+                    title
+                    slug
+                    date
+                    category {
+                        name
+                        slug
                     }
-                    immagine {
+                    image {
                         fluid {
                             ...GatsbyContentfulFluid
                         }

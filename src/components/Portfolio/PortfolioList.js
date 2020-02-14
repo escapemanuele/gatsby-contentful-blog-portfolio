@@ -4,26 +4,27 @@ import Card from '../Common/Card';
 import PropTypes from 'prop-types'
 
 
-const StructuresList = ({structures}) => {
+const PortfolioList = ({items}) => {
+    console.log("DSA", items)
 
     return (
-        <StructuresWrapper>
-            {structures && structures.map(node => {
+        <PortfolioItemsWrapper>
+            {items && items.map(node => {
 
-                node.immagine = node.images? node.images[0] : null;
+                node.image = node.images? node.images[0] : null;
                 return (
                     <Card key={node.id} node={node} />
                 )
             } )}
-        </StructuresWrapper>
+        </PortfolioItemsWrapper>
     )
 }
 
-StructuresList.propTypes = {
-    structures: PropTypes.arrayOf(PropTypes.object).isRequired,
+PortfolioList.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 
-const StructuresWrapper = styled.div`
+const PortfolioItemsWrapper = styled.div`
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -37,4 +38,4 @@ const StructuresWrapper = styled.div`
     }
 `
 
-export default StructuresList
+export default PortfolioList

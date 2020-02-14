@@ -3,27 +3,27 @@ import Layout from '../components/Layout';
 import StyledHero from '../components/StyledHero'
 import {graphql} from 'gatsby'
 import Banner from '../components/Banner';
-import CategoriesStructure from '../components/Structure/CategoriesStructure';
-import Structures from '../components/Structure/Structures';
+import PortfolioCategoryItems from '../components/Portfolio/PortfolioCategoryItems';
+import PortfolioItems from '../components/Portfolio/PortfolioItems';
 import SEO from '../components/SEO';
 
 export default ({data}) => {
 
     return (
         <Layout>
-            <SEO title="Strutture" description="Studio associato Fusignani" />
+            <SEO title="Portfolio" />
             <StyledHero img={data.contactImage.childImageSharp.fluid}>
                 <Banner title="Portfolio" />
             </StyledHero>
-            <CategoriesStructure />
-            <Structures />
+            <PortfolioCategoryItems />
+            <PortfolioItems />
         </Layout>
     )
 }
 
-export const getStructureCategories = graphql`
+export const getPortfolioImage = graphql`
     query {
-        contactImage:file(relativePath:{eq:"architetto-cervia.jpg"}) {
+        contactImage:file(relativePath:{eq:"portfolio-header.jpg"}) {
             childImageSharp {
                 fluid (quality: 90, maxWidth: 4160){
                     ...GatsbyImageSharpFluid_withWebp

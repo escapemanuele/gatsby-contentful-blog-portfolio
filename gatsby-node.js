@@ -6,33 +6,33 @@ exports.createPages = async ({ graphql, actions}) => {
 
     const {data} = await graphql(`
         query {
-            posts:allContentfulArticolo {
+            posts:allContentfulBlogArticle {
                 edges {
                     node {
                         id:contentful_id
-                        indirizzo
-                        categoria {
-                            indirizzo
+                        slug
+                        category {
+                            slug
                         }
                     }
                 }
             }
-            structures:allContentfulStruttura {
+            portfolioItems:allContentfulPortfolioItem {
                 edges {
                     node {
-                      indirizzo
-                      id:contentful_id
-                      categoria {
-                        indirizzo
-                      }
+                        id:contentful_id
+                        slug
+                        category {
+                            slug
+                        }
                     }
                 }
             }
-            structureCategories:allContentfulCategoriaStruttura {
+            portfolioCategories:allContentfulPortfolioItemCategory {
                 edges {
                   node {
-                    titolo
-                    indirizzo
+                    title
+                    slug
                     id:contentful_id
                   }
                 }
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions}) => {
 
     data.posts.edges.forEach(({node}) => {
         createPage({
-            path: `/${node.categoria.indirizzo}/${node.indirizzo}`,
+            path: `/${node.category.slug}/${node.slug}`,
             component: path.resolve("./src/templates/post-template.js"),
             context: {
                 id: node.id
@@ -50,20 +50,20 @@ exports.createPages = async ({ graphql, actions}) => {
         })
     })
     
-    data.structures.edges.forEach(({node}) => {
+    data.portfolioItems.edges.forEach(({node}) => {
         createPage({
-            path: `/${node.categoria.indirizzo}/${node.indirizzo}`,
-            component:path.resolve("./src/templates/structure-template.js"),
+            path: `/${node.category.slug}/${node.slug}`,
+            component:path.resolve("./src/templates/portoflio-item-template.js"),
             context: {
                 id:node.id
             }
         })
     })
 
-    data.structureCategories.edges.forEach(({node}) => {
+    data.portfolioCategories.edges.forEach(({node}) => {
         createPage({
-            path: `/${node.indirizzo}`,
-            component:path.resolve("./src/templates/structure-category-template.js"),
+            path: `/${node.slug}`,
+            component:path.resolve("./src/templates/portfolio-category-template.js"),
             context: {
                 id:node.id
             }

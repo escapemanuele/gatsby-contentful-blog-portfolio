@@ -8,7 +8,7 @@ import 'moment/locale/it';
 
 const Card = ({node}) => {
 
-    const {indirizzo, titolo, immagine, data, categoria} = node
+    const {slug, title, image, date, category} = node
 
     var momentLocale = moment();
     momentLocale.locale('it');
@@ -16,14 +16,14 @@ const Card = ({node}) => {
     return (
         <article className={styles.blog}>
             <div className={styles.imgContainer}>
-                <Image fluid={immagine.fluid} className={styles.img} alt="singolo articolo" style={{height: '100%'}} />
-                <AniLink fade className={styles.link} to={`/${categoria.indirizzo}/${indirizzo}`}>
-                    apri
+                <Image fluid={image.fluid} className={styles.img} style={{height: '100%'}} />
+                <AniLink fade className={styles.link} to={`/${category.slug}/${slug}`}>
+                    open
                 </AniLink>
-                {data && <h6 className={styles.date}>{moment(data).format(`MMMM DD, YYYY`)}</h6>}
+                {date && <h6 className={styles.date}>{moment(date).format(`MMMM DD, YYYY`)}</h6>}
             </div>
             <div className={styles.footer}>
-                <h4>{titolo}</h4>
+                <h4>{title}</h4>
             </div>
         </article>
     )
@@ -31,12 +31,12 @@ const Card = ({node}) => {
 
 Card.propTypes = {
     node: PropTypes.shape({
-        titolo: PropTypes.string.isRequired,
-        indirizzo: PropTypes.string.isRequired,
-        categoria: PropTypes.shape({
-            indirizzo: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
+        category: PropTypes.shape({
+            slug: PropTypes.string.isRequired
         }),
-        immagine: PropTypes.object.isRequired,
+        image: PropTypes.object.isRequired,
     }),
 }
 

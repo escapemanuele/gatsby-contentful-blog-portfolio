@@ -7,9 +7,9 @@ const MapContact = () => {
 
     return (
         <section >
-            <Title title="Raggiungici" subtitle="in studio" />
+            <Title title="Join us" subtitle="in studio" />
             <MapWrapper>
-                <iframe title="mappa-studio-fusignani" frameborder="0" width="100%" height="350px" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Via%20oriani%2022%20Cervia&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" aria-label="Via oriani 22 Cervia"></iframe>
+                <iframe title="change-maps" frameborder="0" width="100%" height="350px" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Via%20oriani%2022%20Cervia&amp;t=m&amp;z=15&amp;output=embed&amp;iwloc=near" aria-label="Via oriani 22 Cervia"></iframe>
             </MapWrapper>
         </section>            
     )

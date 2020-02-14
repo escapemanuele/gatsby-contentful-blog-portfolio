@@ -16,6 +16,7 @@ export default styled(Title)`
     text-transform: uppercase;
     font-size:1.8rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 
     h4 {
         text-align: center;

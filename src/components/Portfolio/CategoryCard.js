@@ -6,12 +6,12 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const CategoryCard = ({category}) => {
 
-    const {titolo, immagine, indirizzo} = category
+    const {title, image, slug} = category
 
     return (
-        <CategoryWrapper fade to={`/${indirizzo}`} >
-            <Image className="category-image" fluid={immagine.fluid} />
-            <div className="category-info">{titolo}</div>
+        <CategoryWrapper fade to={`/${slug}`} >
+            <Image className="category-image" fluid={image.fluid} />
+            <div className="category-info">{title}</div>
         </CategoryWrapper>
     )
 }
@@ -40,6 +40,8 @@ const CategoryWrapper = styled(AniLink)`
         grid-row: 1 / -1;
 
         transition: var(--mainTransition);
+
+        background-size: cover;
     }
 
     .category-info {
@@ -67,9 +69,9 @@ const CategoryWrapper = styled(AniLink)`
 
 CategoryCard.propTypes = {
     category: PropTypes.shape({
-        titolo: PropTypes.string.isRequired,
-        immagine: PropTypes.object.isRequired,
-        indirizzo: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        image: PropTypes.object.isRequired,
+        slug: PropTypes.string.isRequired,
     }),
 }
 

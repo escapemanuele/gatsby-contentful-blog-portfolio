@@ -4,26 +4,26 @@ import { FaDraftingCompass, FaLaptopCode, FaHardHat, FaFeatherAlt } from "react-
 export default [
   {
     icon: <FaDraftingCompass />,
-    title: "Progettazione",
+    title: "Design",
     text:
-      "Effettuiamo lavori di progettazione architettonica, strutturale ed esecutiva",
+      "We carry out architectural, structural and executive design works",
   },
   {
     icon: <FaLaptopCode />,
-    title: "Restauro",
+    title: "Restoration",
     text:
-      "Realizziamo opere di restauro, ovvero di risanamento conservativo dell’immobile",
+      "We carry out restoration works, or conservative restoration of the property",
   },
   {
     icon: <FaHardHat />,
-    title: "Ristrutturazione",
+    title: "Restructuring",
     text:
-      "Eseguiamo interventi di demolizione e ricostruzione strutturale",
+      "We carry out demolition and structural reconstruction interventions",
   },
   {
     icon: <FaFeatherAlt />,
     title: "Restyling",
     text:
-      "Realizziamo lavori di rinnovamento del design di interni: Arredi e finiture",
+      "We carry out renovations of interior design: Furniture and finishes",
   },
 ]

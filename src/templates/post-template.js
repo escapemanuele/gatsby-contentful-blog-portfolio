@@ -15,19 +15,19 @@ const BlogTemplate = ({data}) => {
 
     var momentLocale = moment();
     momentLocale.locale('it');
-    console.log(data)
-    const {titolo, data: pubblicazione, testo: {json}, immagine} = data.post
+
+    const {title, date: published, content: {json}, image} = data.post
     
     return (
         <Layout>
-            <SEO title={titolo} description="Studio associato Fusignani" />
+            <SEO title={title} />
             <BlogWrapper>
-                <StyledHero img={immagine.fluid} className="post-image"/>
+                <StyledHero img={image.fluid} className="post-image"/>
                 <div className="post-container">
-                    <AniLink fade to='/blog' className="btn-primary">Tutti gli articoli</AniLink>
+                    <AniLink fade to='/blog' className="btn-primary">All the articles</AniLink>
                     <div className="content-container">
-                        <h1 className="content-title">{titolo}</h1>
-                        <h4 className="content-published">Pubblicazione: {moment(pubblicazione).format(`MMMM DD, YYYY`)}</h4>
+                        <h1 className="content-title">{title}</h1>
+                        <h4 className="content-published">Published: {moment(published).format(`MMMM DD, YYYY`)}</h4>
                         <hr />
                         <article className={styles.post}>
                             <RichTextDisplay json={json} />
@@ -87,13 +87,13 @@ const BlogWrapper = styled.article`
 
 export const getPost = graphql`
     query getPost($id: String!) {
-        post: contentfulArticolo(contentful_id: {eq: $id}) {
-            titolo
-            data
-            testo {
+        post: contentfulBlogArticle(contentful_id: {eq: $id}) {
+            title
+            date
+            content {
                 json
             }
-            immagine {
+            image {
                 fluid(maxWidth: 2048) {
                     ...GatsbyContentfulFluid
                 }

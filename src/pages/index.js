@@ -11,10 +11,10 @@ const Index = ({data}) => {
 
     return (
         <Layout>
-            <SEO title="Home" description="Studio associato Fusignani" />
+            <SEO title="Home" description={data.site.siteMetadata.description} />
             <StyledHero home img={data.homeImage.childImageSharp.fluid} >
                 <Banner 
-                    title="Studio Associato Fusignani"
+                    title={data.site.siteMetadata.title}
                     info="Architecture & Engineering" >
                 </Banner>
             </StyledHero>
@@ -32,7 +32,13 @@ query {
                 ...GatsbyImageSharpFluid_withWebp
             }
         }
-  }
+    }
+    site {
+        siteMetadata {
+            title
+            description
+        }
+    }
 }
 `
 

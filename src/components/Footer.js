@@ -25,13 +25,13 @@ const Footer = () => {
                 })}
             </div> */}
             <div className={styles.copyright}>
-                copyright &copy; Studio Associato Fusignani {new Date().getFullYear()} Tutti i diritti riservati
+                copyright &copy; XXXXXXXXXX {new Date().getFullYear()} All rights reserved
             </div>
             <div className={styles.copyright}>
-                Viale Oriani A. 22 - 48015 Cervia (RA)  - PARTITA IVA: 00689140390
+                Street N° XXXXX
             </div>
             <div className={styles.created}>
-                Creato da <a href={linkProfilo}>Emanuele Buccelli</a>
+                Created by <a href={linkProfilo}>Emanuele Buccelli</a>
             </div>
         </footer>
     )

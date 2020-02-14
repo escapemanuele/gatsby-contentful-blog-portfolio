@@ -13,9 +13,9 @@ export default  ({data}) => {
 
     return (
         <Layout>
-            <SEO title="Contatti" description="Contattaci per richiedere un preventivo!" />
+            <SEO title="Contact" description="Contact us to request a quote!" />
             <StyledHero img={data.contactImage.childImageSharp.fluid}>
-                <Banner title="Contattaci" />
+                <Banner title="Contact us!" />
             </StyledHero>
             <ContactWrapper>
                 <MapContact />
