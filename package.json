@@ -1,0 +1,49 @@
+{
+  "name": "studioassociatofusignani",
+  "private": true,
+  "description": "Studio di Architettura Fusignani a Cervia",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "gatsby": "^2.13.65",
+    "gatsby-background-image": "^0.8.5",
+    "gatsby-image": "^2.2.8",
+    "gatsby-plugin-playground": "^1.0.6",
+    "gatsby-plugin-react-helmet": "^3.1.4",
+    "gatsby-plugin-sass": "^2.1.8",
+    "gatsby-plugin-sharp": "^2.2.12",
+    "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-plugin-transition-link": "^1.12.4",
+    "gatsby-source-contentful": "^2.1.78",
+    "gatsby-source-filesystem": "^2.1.9",
+    "gatsby-transformer-sharp": "^2.2.6",
+    "gsap": "^2.1.3",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
