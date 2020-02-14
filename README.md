@@ -4,7 +4,7 @@ Gatsby [Contentful](https://www.contentful.com) starter for creating a portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/caf75181-f370-4f51-bb2b-78724a300f6a/deploy-status)](https://app.netlify.com/sites/gatsby-contentful-portfolio-blog/deploys)
 
-![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
+![Gatsby Starter Homepage](./media/gatsby-starter-index.png)
 
 ### [Give a look to the Demo ✨](https://gatsby-contentful-portfolio-blog.netlify.com/)
 
