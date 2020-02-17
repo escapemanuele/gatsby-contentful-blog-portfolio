@@ -9,7 +9,6 @@
 
 This is a simple project built for a local architect. It shows its portfolio and also has a blog.
 
-
 ## 🚀 Quick start
 
 1.  **Clone the repository**
@@ -34,8 +33,6 @@ This is a simple project built for a local architect. It shows its portfolio and
 
     Your site is now running at `http://localhost:8000`!
 
-    Feel free to change 
-    
-
+    Feel free to change
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a46337b9-2b45-492c-8de3-da64485eebc3/deploy-status)](https://app.netlify.com/sites/studioassociatofusignani/deploys)

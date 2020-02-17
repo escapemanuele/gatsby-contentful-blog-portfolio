@@ -1,16 +1,17 @@
 {
-  "name": "studioassociatofusignani",
+  "name": "gatsby-contentful-blog-portfolio",
   "private": true,
-  "description": "Studio di Architettura Fusignani a Cervia",
+  "description": "Gatsby starter for a blog-portfolio served by Contentful",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "setup": "node ./bin/setup.js",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,json,md}\"",
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test": "jest"
@@ -40,24 +41,27 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^25.1.0",
     "babel-preset-gatsby": "^0.2.29",
     "chalk": "^3.0.0",
     "contentful-import": "^7.7.0",
     "cypress": "^4.0.2",
     "envfile": "^4.5.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3",
+    "gatsby-plugin-eslint": "^2.0.8",
     "identity-obj-proxy": "^3.0.0",
     "inquirer": "^7.0.4",
     "jest": "^25.1.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "react-test-renderer": "^16.12.0",
     "start-server-and-test": "^1.10.8"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/escapemanuele/gatsby-contentful-blog-portfolio"
   }
 }
