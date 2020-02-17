@@ -53,7 +53,7 @@ const BlogListTemplate = props => {
             )}
           </section>
         )}
-        <div className={styles.center}>
+        <div className={styles.center} data-cy="post-list">
           {data.posts.edges.map(({ node }) => {
             return <Card key={node.id} node={node} />
           })}

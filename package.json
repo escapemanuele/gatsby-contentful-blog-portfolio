@@ -13,8 +13,14 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,json,md}\"",
     "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
-    "test": "jest"
+    "cy:run": "cypress run",
+    "test:run:e2e": "start-server-and-test develop http://localhost:8000 cy:run",
+    "test:open:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
+  },
+  "husky": {
+    "hooks": {
+        "pre-commit": "npm run format"
+    }  
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
@@ -53,6 +59,7 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-react": "^7.18.3",
     "gatsby-plugin-eslint": "^2.0.8",
+    "husky": "^4.2.3",
     "identity-obj-proxy": "^3.0.0",
     "inquirer": "^7.0.4",
     "jest": "^25.1.0",

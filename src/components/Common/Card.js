@@ -13,14 +13,14 @@ const Card = ({ node }) => {
   momentLocale.locale("it")
 
   return (
-    <article className={styles.blog}>
+    <article className={styles.blog} >
       <div className={styles.imgContainer}>
         <Image
           fluid={image.fluid}
           className={styles.img}
           style={{ height: "100%" }}
         />
-        <AniLink fade className={styles.link} to={`/${category.slug}/${slug}`}>
+        <AniLink fade className={styles.link} to={`/${category.slug}/${slug}`} data-cy="portfolio-item">
           open
         </AniLink>
         {date && (

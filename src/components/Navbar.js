@@ -16,11 +16,11 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <Anilink fade to="/">
+          <Anilink fade to="/" data-cy="logo">
             <img src={Logo} alt="logo" />
           </Anilink>
 
-          <button type="button" className={styles.logoBtn} onClick={toggleNav}>
+          <button type="button" className={styles.logoBtn} onClick={toggleNav} data-cy="mobile-button">
             <FaAlignRight className={styles.logoIcon} />
           </button>
         </div>
@@ -34,20 +34,13 @@ const Navbar = () => {
           {links.map((item, index) => {
             return (
               <li key={index}>
-                <Anilink fade to={item.path}>
+                <Anilink fade to={item.path} data-cy={item.text}>
                   {item.text}
                 </Anilink>
               </li>
             )
           })}
         </ul>
-        <div className={styles.navSocialLinks}>
-          {/* {socialIcons.map((icon, index) => {
-                        return <a key={index} href={icon.url} target="_blank" rel="noopener noreferrer">
-                            {icon.icon}
-                        </a>
-                    })} */}
-        </div>
       </div>
     </nav>
   )

@@ -7,11 +7,11 @@ const PortfolioList = ({ items }) => {
   console.log("DSA", items)
 
   return (
-    <PortfolioItemsWrapper>
+    <PortfolioItemsWrapper data-cy="portfolio-items">
       {items &&
         items.map(node => {
           node.image = node.images ? node.images[0] : null
-          return <Card key={node.id} node={node} />
+          return <Card key={node.id} node={node}  />
         })}
     </PortfolioItemsWrapper>
   )

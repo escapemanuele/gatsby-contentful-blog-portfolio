@@ -8,7 +8,7 @@ const CategoryCard = ({ category }) => {
   const { title, image, slug } = category
 
   return (
-    <CategoryWrapper fade to={`/${slug}`}>
+    <CategoryWrapper fade to={`/${slug}`} data-cy="portfolio-category">
       <Image className="category-image" fluid={image.fluid} />
       <div className="category-info">{title}</div>
     </CategoryWrapper>

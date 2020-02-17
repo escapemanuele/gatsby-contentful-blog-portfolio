@@ -9,7 +9,7 @@ const PortfolioCategoryItems = () => {
   return (
     <>
       <Title title="PROJECT" subtitle="CATEGORIES" />
-      <PortfolioItemsWrapper>
+      <PortfolioItemsWrapper data-cy="project-categories">
         {portfolioCategories.edges.map(({ node }) => {
           return <CategoryCard key={node.id} category={node} />
         })}

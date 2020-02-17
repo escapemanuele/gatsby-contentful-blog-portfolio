@@ -18,6 +18,7 @@ const EmailContact = () => {
               type="text"
               name="name"
               id="name"
+              data-cy="form-name"
               className={styles.formControl}
               placeholder="Your name"
             />
@@ -28,6 +29,7 @@ const EmailContact = () => {
               type="email"
               name="email"
               id="email"
+              data-cy="form-email"
               className={styles.formControl}
               placeholder="email@email.com"
             />
@@ -38,6 +40,7 @@ const EmailContact = () => {
               name="message"
               id="message"
               rows="10"
+              data-cy="form-message"
               className={styles.formControl}
               placeholder="Your request"
             />
