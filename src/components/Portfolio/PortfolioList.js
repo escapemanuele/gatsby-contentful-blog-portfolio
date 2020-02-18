@@ -4,8 +4,6 @@ import Card from "../Common/Card"
 import PropTypes from "prop-types"
 
 const PortfolioList = ({ items }) => {
-  console.log("DSA", items)
-
   return (
     <PortfolioItemsWrapper data-cy="portfolio-items">
       {items &&

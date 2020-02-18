@@ -1,6 +1,7 @@
 import React from "react"
 import Title from "../Title"
 import styles from "../../css/contact.module.css"
+import { emailStrings } from './ContactStrings'
 
 const EmailContact = () => {
   return (
@@ -19,7 +20,7 @@ const EmailContact = () => {
               name="name"
               id="name"
               className={styles.formControl}
-              placeholder={strings.namePlaceholder}
+              placeholder={emailStrings.namePlaceholder}
             />
           </div>
           <div>
@@ -29,7 +30,7 @@ const EmailContact = () => {
               name="email"
               id="email"
               className={styles.formControl}
-              placeholder={strings.emailPlaceholder}
+              placeholder={emailStrings.emailPlaceholder}
             />
           </div>
           <div>
@@ -39,11 +40,11 @@ const EmailContact = () => {
               id="message"
               rows="10"
               className={styles.formControl}
-              placeholder={strings.messagePlaceholder}
+              placeholder={emailStrings.messagePlaceholder}
             />
           </div>
           <div>
-            <input type="submit" value={strings.submitText} className={styles.submit} />
+            <input type="submit" value={emailStrings.submitText} className={styles.submit} />
           </div>
         </form>
       </div>
@@ -51,11 +52,5 @@ const EmailContact = () => {
   )
 }
 
-export const strings = {
-    namePlaceholder: "Your name",
-    emailPlaceholder: "Your email",
-    messagePlaceholder: "Your message",
-    submitText: "Submit"
-};
 
 export default EmailContact

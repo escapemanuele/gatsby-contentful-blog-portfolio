@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import { strings } from "../../src/components/Contact/EmailContact"
+import { emailStrings } from "../../src/components/Contact/ContactStrings"
 
 describe("Test contacts page", function() {
   beforeEach(() => {
@@ -11,9 +11,9 @@ describe("Test contacts page", function() {
   })
 
   it("Can fill the form", () => {
-    cy.findByPlaceholderText(strings.namePlaceholder).type("Test").should("have.value", "Test")
-    cy.findByPlaceholderText(strings.emailPlaceholder).type("Test@test.com").should("have.value", "Test@test.com")
-    cy.findByPlaceholderText(strings.messagePlaceholder).type("Test message").should("have.value", "Test message")
-    cy.get("form").within(() => cy.findByText(strings.submitText)).should('exist');
+    cy.findByPlaceholderText(emailStrings.namePlaceholder).type("Test").should("have.value", "Test")
+    cy.findByPlaceholderText(emailStrings.emailPlaceholder).type("Test@test.com").should("have.value", "Test@test.com")
+    cy.findByPlaceholderText(emailStrings.messagePlaceholder).type("Test message").should("have.value", "Test message")
+    cy.get("form").within(() => cy.findByText(emailStrings.submitText)).should('exist');
   })
 })
