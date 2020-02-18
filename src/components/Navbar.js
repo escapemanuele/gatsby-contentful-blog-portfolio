@@ -20,7 +20,12 @@ const Navbar = () => {
             <img src={Logo} alt="logo" />
           </Anilink>
 
-          <button type="button" className={styles.logoBtn} onClick={toggleNav} data-cy="mobile-button">
+          <button
+            type="button"
+            className={styles.logoBtn}
+            onClick={toggleNav}
+            data-cy="mobile-button"
+          >
             <FaAlignRight className={styles.logoIcon} />
           </button>
         </div>

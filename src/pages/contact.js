@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
 import Banner from "../components/Banner"
-import Contact from "../components/Contact/EmailContact"
+import EmailContact from "../components/Contact/EmailContact"
 import styled from "styled-components"
 import MapContact from "../components/Contact/MapContact"
 import ProjectWithUs from "../components/Contact/ProjectWithUs"
@@ -18,7 +18,7 @@ export default ({ data }) => {
       </StyledHero>
       <ContactWrapper>
         <MapContact />
-        <Contact />
+        <EmailContact />
       </ContactWrapper>
       <ProjectWithUs />
     </Layout>

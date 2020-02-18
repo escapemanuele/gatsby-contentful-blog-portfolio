@@ -6,7 +6,7 @@ const EmailContact = () => {
   return (
     <section>
       <Title title="Contact us" subtitle="now" />
-      <div c>
+      <div>
         <form
           action="https://formspree.io/..."
           method="POST"
@@ -18,9 +18,8 @@ const EmailContact = () => {
               type="text"
               name="name"
               id="name"
-              data-cy="form-name"
               className={styles.formControl}
-              placeholder="Your name"
+              placeholder={strings.namePlaceholder}
             />
           </div>
           <div>
@@ -29,9 +28,8 @@ const EmailContact = () => {
               type="email"
               name="email"
               id="email"
-              data-cy="form-email"
               className={styles.formControl}
-              placeholder="email@email.com"
+              placeholder={strings.emailPlaceholder}
             />
           </div>
           <div>
@@ -40,18 +38,24 @@ const EmailContact = () => {
               name="message"
               id="message"
               rows="10"
-              data-cy="form-message"
               className={styles.formControl}
-              placeholder="Your request"
+              placeholder={strings.messagePlaceholder}
             />
           </div>
           <div>
-            <input type="submit" value="Send" className={styles.submit} />
+            <input type="submit" value={strings.submitText} className={styles.submit} />
           </div>
         </form>
       </div>
     </section>
   )
 }
+
+export const strings = {
+    namePlaceholder: "Your name",
+    emailPlaceholder: "Your email",
+    messagePlaceholder: "Your message",
+    submitText: "Submit"
+};
 
 export default EmailContact
