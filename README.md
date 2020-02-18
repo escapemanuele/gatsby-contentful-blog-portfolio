@@ -8,6 +8,8 @@ Gatsby [Contentful](https://www.contentful.com) starter for creating a portfolio
 
 ### [Give a look to the Demo ✨](https://gatsby-contentful-portfolio-blog.netlify.com/)
 
+### If this starter was helpful, please consider giving it a star! I would really appreciate that :)
+
 
 ## Features
 
@@ -30,6 +32,7 @@ Install Yarn or Npm
 
 ```
 $ git clone git@github.com:contentful-userland/gatsby-contentful-starter.git
+$ cd gatsby-contentful-starter
 $ npm install
 ```
 
