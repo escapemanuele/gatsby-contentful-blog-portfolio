@@ -15,13 +15,14 @@ This is a simple project built for a local architect. It shows its portfolio and
 ![Gatsby Starter Mate logo](./media/gatsby-starter-index.png)
 
 ## Features
- - Gatsby
- - Graphql
- - Contenful
- - Cypress
- - CSS Modules and Styled Components
 
- ### If this project helped you, please consider giving it a star! It would mean a lot to me :)
+- Gatsby
+- Graphql
+- Contenful
+- Cypress
+- CSS Modules and Styled Components
+
+### If this project helped you, please consider giving it a star! It would mean a lot to me :)
 
 ## 🚀 Quick start
 
@@ -42,7 +43,7 @@ This is a simple project built for a local architect. It shows its portfolio and
     cd your-project-name
     npm install
     ```
-    
+
 3.  **Configure Contenful**
 
     Get yourself a [Contenful Account](https://www.contentful.com/), create a new space and configure this project to use it with:
@@ -50,7 +51,7 @@ This is a simple project built for a local architect. It shows its portfolio and
     ```sh
     npm run setup
     ```
-    
+
 4.  **Start developing.**
 
     Finally you are ready to see your project. Start the engine!
@@ -64,5 +65,3 @@ This is a simple project built for a local architect. It shows its portfolio and
     Your site is now running at `http://localhost:8000`!
 
     Feel free to change everything you want!
-
-
