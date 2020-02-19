@@ -21,6 +21,8 @@ This is a simple project built for a local architect. It shows its portfolio and
  - Cypress
  - CSS Modules and Styled Components
 
+ ### If this project helped you, please consider giving it a star! It would mean a lot to me :)
+
 ## 🚀 Quick start
 
 1.  **Clone the repository**
@@ -49,7 +51,7 @@ This is a simple project built for a local architect. It shows its portfolio and
     npm run setup
     ```
     
-2.  **Start developing.**
+4.  **Start developing.**
 
     Finally you are ready to see your project. Start the engine!
 
@@ -57,10 +59,10 @@ This is a simple project built for a local architect. It shows its portfolio and
     gatsby develop
     ```
 
-3.  **Open the source code and start editing!**
+5.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
-    Feel free to change
+    Feel free to change everything you want!
 
 
