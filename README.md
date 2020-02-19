@@ -11,6 +11,8 @@ This is a simple project built for a local architect. It shows its portfolio and
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a46337b9-2b45-492c-8de3-da64485eebc3/deploy-status)](https://app.netlify.com/sites/studioassociatofusignani/deploys)
 
+![Gatsby Starter Mate logo](./media/gatsby-starter-index.png)
+
 ## Features
  - Gatsby
  - Graphql
