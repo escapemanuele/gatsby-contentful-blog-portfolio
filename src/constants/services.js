@@ -1,12 +1,16 @@
 import React from "react"
-import { FaDraftingCompass, FaLaptopCode, FaHardHat, FaFeatherAlt } from "react-icons/fa"
+import {
+  FaDraftingCompass,
+  FaLaptopCode,
+  FaHardHat,
+  FaFeatherAlt,
+} from "react-icons/fa"
 
 export default [
   {
     icon: <FaDraftingCompass />,
     title: "Design",
-    text:
-      "We carry out architectural, structural and executive design works",
+    text: "We carry out architectural, structural and executive design works",
   },
   {
     icon: <FaLaptopCode />,
@@ -17,13 +21,11 @@ export default [
   {
     icon: <FaHardHat />,
     title: "Restructuring",
-    text:
-      "We carry out demolition and structural reconstruction interventions",
+    text: "We carry out demolition and structural reconstruction interventions",
   },
   {
     icon: <FaFeatherAlt />,
     title: "Restyling",
-    text:
-      "We carry out renovations of interior design: Furniture and finishes",
+    text: "We carry out renovations of interior design: Furniture and finishes",
   },
 ]

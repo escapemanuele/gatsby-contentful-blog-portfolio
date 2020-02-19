@@ -1,27 +1,43 @@
-import React from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
-import CategoryCard from './CategoryCard'
-import styled from 'styled-components'
-import Title from '../Title'
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import CategoryCard from "./CategoryCard"
+import styled from "styled-components"
+import Title from "../Title"
 
 const PortfolioCategoryItems = () => {
-
-    const {portfolioCategories} = useStaticQuery(getPortfolioItemCategories)
-    return (
-      <>
-        <Title title="PROJECT" subtitle="CATEGORIES"  />
-        <PortfolioItemsWrapper>
-          {
-              portfolioCategories.edges.map(({node}) => {
-                  return (
-                      <CategoryCard key={node.id} category={node} />
-                  )
-              })
-          }
-        </PortfolioItemsWrapper>
-      </>
-    )
+  const { portfolioCategories } = useStaticQuery(getPortfolioItemCategories)
+  return (
+    <>
+      <Title title="PROJECT" subtitle="CATEGORIES" />
+      <PortfolioItemsWrapper data-cy="project-categories">
+        {portfolioCategories.edges.map(({ node }) => {
+          return <CategoryCard key={node.id} category={node} />
+        })}
+      </PortfolioItemsWrapper>
+    </>
+  )
 }
+
+const getPortfolioItemCategories = graphql`
+  {
+    portfolioCategories: allContentfulPortfolioItemCategory(
+      filter: { node_locale: { eq: "en-US" } }
+    ) {
+      edges {
+        node {
+          id: contentful_id
+          title
+          slug
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const PortfolioItemsWrapper = styled.section`
   display: grid;
@@ -35,24 +51,4 @@ const PortfolioItemsWrapper = styled.section`
     padding: 2rem;
   }
 `
-
-const getPortfolioItemCategories = graphql`
-{
-  portfolioCategories:allContentfulPortfolioItemCategory(filter:{node_locale:{eq: "en-US"}}) {
-    edges {
-      node {
-        id:contentful_id
-        title
-        slug
-        image {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
-        }
-      }
-    }
-  }
-}
-`
-
 export default PortfolioCategoryItems
