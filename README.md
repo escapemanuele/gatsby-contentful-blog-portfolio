@@ -65,3 +65,11 @@ This is a simple project built for a local architect. It shows its portfolio and
     Your site is now running at `http://localhost:8000`!
 
     Feel free to change everything you want!
+    
+6.  **Test the application with Cypress**
+
+    There are some cypress tests defined in the 'cypress' folder.
+    You only need to use
+     ```sh
+    npm run test:open:e2e
+    ```
