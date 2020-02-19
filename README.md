@@ -29,12 +29,28 @@ This is a simple project built for a local architect. It shows its portfolio and
     gatsby clone https://github.com/escapemanuele/gatsby-contentful-blog-portfolio  your-project-name
     ```
 
-2.  **Start developing.**
+2.  **Install the packages**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your new site’s directory and install the required packages.
 
     ```sh
     cd your-project-name
+    npm install
+    ```
+    
+3.  **Configure Contenful**
+
+    Get yourself a [Contenful Account](https://www.contentful.com/), create a new space and configure this project to use it with:
+
+    ```sh
+    npm run setup
+    ```
+    
+2.  **Start developing.**
+
+    Finally you are ready to see your project. Start the engine!
+
+    ```sh
     gatsby develop
     ```
 
