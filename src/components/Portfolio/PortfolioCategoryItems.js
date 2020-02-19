@@ -19,24 +19,24 @@ const PortfolioCategoryItems = () => {
 }
 
 const getPortfolioItemCategories = graphql`
-{
-  portfolioCategories: allContentfulPortfolioItemCategory(
-    filter: { node_locale: { eq: "en-US" } }
-  ) {
-    edges {
-      node {
-        id: contentful_id
-        title
-        slug
-        image {
-          fluid {
-            ...GatsbyContentfulFluid
+  {
+    portfolioCategories: allContentfulPortfolioItemCategory(
+      filter: { node_locale: { eq: "en-US" } }
+    ) {
+      edges {
+        node {
+          id: contentful_id
+          title
+          slug
+          image {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
           }
         }
       }
     }
   }
-}
 `
 
 const PortfolioItemsWrapper = styled.section`

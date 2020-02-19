@@ -16,26 +16,25 @@ const PortfolioItems = () => {
 }
 
 const getPortfolioItems = graphql`
-{
-  items: allContentfulPortfolioItem {
-    edges {
-      node {
-        id: contentful_id
-        slug
-        title
-        images {
-          fluid {
-            ...GatsbyContentfulFluid
-          }
-        }
-        category {
+  {
+    items: allContentfulPortfolioItem {
+      edges {
+        node {
+          id: contentful_id
           slug
+          title
+          images {
+            fluid {
+              ...GatsbyContentfulFluid
+            }
+          }
+          category {
+            slug
+          }
         }
       }
     }
   }
-}
 `
-
 
 export default PortfolioItems

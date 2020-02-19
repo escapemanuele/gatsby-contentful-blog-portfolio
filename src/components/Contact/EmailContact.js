@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "../Title"
 import styles from "../../css/contact.module.css"
-import { emailStrings } from './ContactStrings'
+import { emailStrings } from "./ContactStrings"
 
 const EmailContact = () => {
   return (
@@ -44,13 +44,16 @@ const EmailContact = () => {
             />
           </div>
           <div>
-            <input type="submit" value={emailStrings.submitText} className={styles.submit} />
+            <input
+              type="submit"
+              value={emailStrings.submitText}
+              className={styles.submit}
+            />
           </div>
         </form>
       </div>
     </section>
   )
 }
-
 
 export default EmailContact

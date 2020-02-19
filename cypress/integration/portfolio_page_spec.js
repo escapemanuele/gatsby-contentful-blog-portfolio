@@ -1,11 +1,9 @@
 /// <reference types="Cypress" />
 
-
 const graphqlFixture = require("../fixtures/graphql")
 
-describe('Test dynamic project categories', () => {
-
-  let categories;
+describe("Test dynamic project categories", () => {
+  let categories
 
   before(() => {
     const query = `{
@@ -20,36 +18,33 @@ describe('Test dynamic project categories', () => {
         }
       }
     `
-    cy.request(
-      {
-        url: graphqlFixture.graphqlEndpoint,
-        method: 'POST',
-        body: { query },
-        failOnStatusCode: false
-      }
-    ).then((res) => {
-      categories = res.body.data.portfolioCategories.edges;
+    cy.request({
+      url: graphqlFixture.graphqlEndpoint,
+      method: "POST",
+      body: { query },
+      failOnStatusCode: false,
+    }).then(res => {
+      categories = res.body.data.portfolioCategories.edges
     })
 
-    cy.visit('/portfolio')
+    cy.visit("/portfolio")
   })
-  
+
   it("Load the correct number of categories", function() {
     cy.get("[data-cy=project-categories]")
       .children()
       .should("have.length", categories.length)
   })
 
-  it("Load the right categories", function () {
-    categories.forEach(({node}) => {
+  it("Load the right categories", function() {
+    categories.forEach(({ node }) => {
       cy.findByText(node.title)
     })
   })
 })
 
 describe("Test dynamic projects", function() {
-
-  let items;
+  let items
 
   before(() => {
     const query = `
@@ -63,32 +58,29 @@ describe("Test dynamic projects", function() {
           }
         }
       }
-    }`;
+    }`
 
-    cy.request(
-      {
-        url: graphqlFixture.graphqlEndpoint,
-        method: 'POST',
-        body: { query },
-        failOnStatusCode: false
-      }
-    ).then((res) => {
-      items = res.body.data.items.edges;
+    cy.request({
+      url: graphqlFixture.graphqlEndpoint,
+      method: "POST",
+      body: { query },
+      failOnStatusCode: false,
+    }).then(res => {
+      items = res.body.data.items.edges
     })
   })
 
-  it ("Load the correct number of items", () => {
+  it("Load the correct number of items", () => {
     cy.get("[data-cy=portfolio-items]")
-    .children()
-    .should("have.length", items.length)
+      .children()
+      .should("have.length", items.length)
   })
 
-  it ("Load the correct items", () => {
-    items.forEach(({node}) => {
+  it("Load the correct items", () => {
+    items.forEach(({ node }) => {
       cy.findByText(node.title)
     })
   })
-
 })
 
 describe("Test portfolio page", function() {
@@ -124,4 +116,3 @@ describe("Test portfolio page", function() {
       })
   })
 })
-

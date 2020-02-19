@@ -1,3 +1,3 @@
 {
-    "graphqlEndpoint": "http://localhost:8000/__graphql?"
+  "graphqlEndpoint": "http://localhost:8000/__graphql?"
 }

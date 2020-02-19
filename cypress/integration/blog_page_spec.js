@@ -1,10 +1,8 @@
 /// <reference types="Cypress" />
 const graphqlFixture = require("../fixtures/graphql")
 
-
 describe("Test dynamic blog", function() {
-
-  let posts;
+  let posts
 
   before(() => {
     const query = `{
@@ -26,32 +24,32 @@ describe("Test dynamic blog", function() {
       }
     }`
 
-    cy.request(
-      {
-        url: graphqlFixture.graphqlEndpoint,
-        method: 'POST',
-        body: { query },
-        failOnStatusCode: false
-      }
-    ).then((res) => {
+    cy.request({
+      url: graphqlFixture.graphqlEndpoint,
+      method: "POST",
+      body: { query },
+      failOnStatusCode: false,
+    }).then(res => {
       posts = res.body.data.posts.edges
     })
 
-    cy.visit('/blog')
+    cy.visit("/blog")
   })
 
   it("Load right number of posts", () => {
     cy.get('[data-cy="post-list"]')
-      .children().should('have.length', posts.length);
+      .children()
+      .should("have.length", posts.length)
   })
 
-  it("Load the right items", function (){
-    posts.forEach(({node}) => {
-      cy.findByText(node.title);
-      cy.get("[data-cy='portfolio-item']").should('have.attr', 'href').and('include', `/${node.category.slug}/${node.slug}`);
+  it("Load the right items", function() {
+    posts.forEach(({ node }) => {
+      cy.findByText(node.title)
+      cy.get("[data-cy='portfolio-item']")
+        .should("have.attr", "href")
+        .and("include", `/${node.category.slug}/${node.slug}`)
     })
   })
-
 })
 
 describe("Test blog page", function() {
