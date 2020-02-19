@@ -4,10 +4,17 @@
   </a>
 </p>
 <h1 align="center">
-  An architect portfolio built with Gatsby and Contentful: http://www.studioassociatofusignani.it/
+  An architect portfolio built with Gatsby and Contentful: https://gatsby-contentful-portfolio-blog.netlify.com/
 </h1>
 
 This is a simple project built for a local architect. It shows its portfolio and also has a blog.
+
+## Features
+ - Gatsby
+ - Graphql
+ - Contenful
+ - Cypress
+ - CSS Modules and Styled Components
 
 ## 🚀 Quick start
 
@@ -17,7 +24,7 @@ This is a simple project built for a local architect. It shows its portfolio and
 
     ```sh
     # clone the project using Git
-    gatsby clone https://github.com/escapemanuele/studioassociatofusignani  your-project-name
+    gatsby clone https://github.com/escapemanuele/gatsby-contentful-blog-portfolio  your-project-name
     ```
 
 2.  **Start developing.**
