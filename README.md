@@ -51,7 +51,7 @@ This is a simple project built for a local architect. It shows its portfolio and
     ```sh
     npm run setup
     ```
-    Note: you will need to add your spaceID and Content Delivery Token as environment variables to Netlify before you deploy<sup>1</sup>
+    You will need to add your spaceID and Content Delivery Token as environment variables to Netlify before you deploy<sup>1</sup>
 
 4.  **Start developing.**
 
@@ -74,6 +74,6 @@ This is a simple project built for a local architect. It shows its portfolio and
      ```sh
     npm run test:open:e2e
     ```
-
+&nbsp;
 
 <sup>1</sup>The setup script writes your spaceID and Content Delivery Token to a .env file for local development.  .env files are not pushed to remote git repos for security reasons. Thus you'll need to set the environment variables so Netlify can access Contentful.  Your personal access token for the Content Management API is used to create the initial content types and is not saved.
