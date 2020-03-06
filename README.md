@@ -32,7 +32,7 @@ This is a simple project built for a local architect. It shows its portfolio and
 
     ```sh
     # clone the project using Git
-    gatsby clone https://github.com/escapemanuele/gatsby-contentful-blog-portfolio  your-project-name
+    git clone https://github.com/escapemanuele/gatsby-contentful-blog-portfolio  your-project-name
     ```
 
 2.  **Install the packages**
