@@ -11,6 +11,8 @@ This is a simple project built for a local architect. It shows its portfolio and
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a46337b9-2b45-492c-8de3-da64485eebc3/deploy-status)](https://app.netlify.com/sites/studioassociatofusignani/deploys)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Open Source
+Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 ![Gatsby Starter Mate logo](./media/gatsby-starter-index.png)
 
