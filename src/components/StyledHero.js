@@ -10,7 +10,7 @@ const StyledHero = ({ img, className, children, home }) => {
   let mainImage = img ? img : defaultImage
 
   return (
-    <BackgroundImage className={className} fluid={mainImage} home={home}>
+    <BackgroundImage className={className} fluid={mainImage}>
       {children}
     </BackgroundImage>
   )
