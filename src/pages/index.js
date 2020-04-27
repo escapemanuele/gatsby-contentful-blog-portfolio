@@ -8,15 +8,11 @@ import SEO from "../components/SEO"
 import ProjectWithUs from "../components/Contact/ProjectWithUs"
 
 const Index = ({ data }) => {
-
   return (
     <Layout>
       <SEO title="Home" description={data.site.siteMetadata.description} />
       <StyledHero home img={data.homeImage.childImageSharp.fluid}>
-        <Banner
-          title={data.site.siteMetadata.title}
-          info="hero-title"
-        ></Banner>
+        <Banner title={data.site.siteMetadata.title} info="hero-title"></Banner>
       </StyledHero>
       <Services />
       <ProjectWithUs />
@@ -41,6 +37,5 @@ export const getIndexData = graphql`
     }
   }
 `
-
 
 export default Index
