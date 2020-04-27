@@ -17,7 +17,7 @@ module.exports = {
     author: "Emanuele Buccelli",
     twitterUsername: "@escapemanuele",
     image: "/index-hero.jpg",
-    siteUrl: "https://studioassociatofusignani.it",
+    siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -43,5 +43,18 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatbsy Contentful Starter`,
+        short_name: `GatsbyContentful`,
+        start_url: `/`,
+        background_color: `#6b37bf`,
+        theme_color: `#6b37bf`,
+        display: `standalone`,
+        icon: `static/images/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }

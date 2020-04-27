@@ -12,10 +12,7 @@ const Index = ({ data }) => {
     <Layout>
       <SEO title="Home" description={data.site.siteMetadata.description} />
       <StyledHero home img={data.homeImage.childImageSharp.fluid}>
-        <Banner
-          title={data.site.siteMetadata.title}
-          info="Architecture & Engineering"
-        ></Banner>
+        <Banner title={data.site.siteMetadata.title} info="hero-title"></Banner>
       </StyledHero>
       <Services />
       <ProjectWithUs />
@@ -23,7 +20,7 @@ const Index = ({ data }) => {
   )
 }
 
-export const getHomeImage = graphql`
+export const getIndexData = graphql`
   query {
     homeImage: file(relativePath: { eq: "index-hero.jpg" }) {
       childImageSharp {

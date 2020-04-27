@@ -53,6 +53,7 @@ Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/elle
     ```sh
     npm run setup
     ```
+
     You will need to add your spaceID and Content Delivery Token as environment variables to Netlify before you deploy<sup>1</sup>
 
 4.  **Start developing.**
@@ -68,14 +69,15 @@ Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/elle
     Your site is now running at `http://localhost:8000`!
 
     Feel free to change everything you want!
-    
+
 6.  **Test the application with Cypress**
 
-    There are some cypress tests defined in the 'cypress' folder.
-    You only need to use
-     ```sh
-    npm run test:open:e2e
-    ```
-&nbsp;
+        There are some cypress tests defined in the 'cypress' folder.
+        You only need to use
+         ```sh
+        npm run test:open:e2e
+        ```
 
-<sup>1</sup>The setup script writes your spaceID and Content Delivery Token to a .env file for local development.  .env files are not pushed to remote git repos for security reasons. Thus you'll need to set the environment variables so Netlify can access Contentful.  Your personal access token for the Content Management API is used to create the initial content types and is not saved.
+    &nbsp;
+
+<sup>1</sup>The setup script writes your spaceID and Content Delivery Token to a .env file for local development. .env files are not pushed to remote git repos for security reasons. Thus you'll need to set the environment variables so Netlify can access Contentful. Your personal access token for the Content Management API is used to create the initial content types and is not saved.

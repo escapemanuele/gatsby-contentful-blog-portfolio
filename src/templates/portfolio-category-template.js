@@ -9,7 +9,6 @@ import PortfolioList from "../components/Portfolio/PortfolioList"
 
 const PortoflioCategory = ({ data }) => {
   const { title, description, portfolioitem } = data.portfolioCategory
-  console.log("PORTFOLIOITEM", data)
   return (
     <Layout>
       <SEO title={title} description={description} />
