@@ -24,6 +24,7 @@ const Navbar = () => {
             type="button"
             className={styles.logoBtn}
             onClick={toggleNav}
+            aria-label="Open Menu"
             data-cy="mobile-button"
           >
             <FaAlignRight className={styles.logoIcon} />
