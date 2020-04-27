@@ -8,13 +8,14 @@ import SEO from "../components/SEO"
 import ProjectWithUs from "../components/Contact/ProjectWithUs"
 
 const Index = ({ data }) => {
+
   return (
     <Layout>
       <SEO title="Home" description={data.site.siteMetadata.description} />
       <StyledHero home img={data.homeImage.childImageSharp.fluid}>
         <Banner
           title={data.site.siteMetadata.title}
-          info="Architecture & Engineering"
+          info="hero-title"
         ></Banner>
       </StyledHero>
       <Services />
@@ -23,7 +24,7 @@ const Index = ({ data }) => {
   )
 }
 
-export const getHomeImage = graphql`
+export const getIndexData = graphql`
   query {
     homeImage: file(relativePath: { eq: "index-hero.jpg" }) {
       childImageSharp {
@@ -40,5 +41,6 @@ export const getHomeImage = graphql`
     }
   }
 `
+
 
 export default Index
