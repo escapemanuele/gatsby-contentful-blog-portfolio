@@ -21,6 +21,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  font-display: swap;
   color: var(--mainBlack);
   background: var(--mainWhite);
   line-height: 1.4;
@@ -33,6 +34,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
+  font-display: swap;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
