@@ -4,7 +4,6 @@ import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 
 const StyledHero = ({ img, className, children, home }) => {
-
   const data = useStaticQuery(getDefaultImage)
   const defaultImage = data.file.childImageSharp.fluid
 

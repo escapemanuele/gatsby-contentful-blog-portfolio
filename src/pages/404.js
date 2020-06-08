@@ -9,7 +9,7 @@ const Error = () => {
     <Layout>
       <header className={styles.error}>
         <Banner title="Page not found">
-        <Link to="/" className="btn-white">
+          <Link to="/" className="btn-white">
             Go back
           </Link>
         </Banner>
