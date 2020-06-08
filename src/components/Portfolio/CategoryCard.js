@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import styled from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 const CategoryCard = ({ category }) => {
   const { title, image, slug } = category
@@ -15,7 +15,7 @@ const CategoryCard = ({ category }) => {
   )
 }
 
-const CategoryWrapper = styled(AniLink)`
+const CategoryWrapper = styled(Link)`
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: 1;

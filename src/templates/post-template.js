@@ -1,8 +1,7 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styles from "../css/single-blog.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import moment from "moment"
 import "moment/locale/it"
@@ -28,9 +27,9 @@ const BlogTemplate = ({ data }) => {
       <BlogWrapper>
         <StyledHero img={image.fluid} className="post-image" />
         <div className="post-container">
-          <AniLink fade to="/blog" className="btn-primary">
+          <Link to="/blog" className="btn-primary">
             All the articles
-          </AniLink>
+          </Link>
           <div className="content-container">
             <h1 className="content-title">{title}</h1>
             <h4 className="content-published">

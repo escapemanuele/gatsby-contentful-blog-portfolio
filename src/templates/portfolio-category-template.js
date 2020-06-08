@@ -1,9 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import styles from "../css/blog.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import SEO from "../components/SEO"
 import PortfolioList from "../components/Portfolio/PortfolioList"
 
@@ -14,14 +13,13 @@ const PortoflioCategory = ({ data }) => {
       <SEO title={title} description={description} />
       <CategoryWrapper className={styles.blog}>
         <h1>{title}</h1>
-        <AniLink
-          fade
+        <Link
           to={`/portfolio`}
           className="btn-primary"
           style={{ marginTop: "3rem" }}
         >
           back
-        </AniLink>
+        </Link>
         <PortfolioList items={portfolioitem} />
       </CategoryWrapper>
     </Layout>

@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "../../css/blog-card.module.css"
 import Image from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import moment from "moment"
 import "moment/locale/it"
@@ -20,14 +20,13 @@ const Card = ({ node }) => {
           className={styles.img}
           style={{ height: "100%" }}
         />
-        <AniLink
-          fade
+        <Link
           className={styles.link}
           to={`/${category.slug}/${slug}`}
           data-cy="portfolio-item"
         >
           open
-        </AniLink>
+        </Link>
         {date && (
           <h6 className={styles.date}>
             {moment(date).format(`MMMM DD, YYYY`)}

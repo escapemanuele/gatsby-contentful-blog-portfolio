@@ -72,3 +72,7 @@ yarn-error.log
 # Cypress
 cypress/videos
 cypress/screenshots
+
+#serverless 
+
+serverless/contact-form-api/secrets.json

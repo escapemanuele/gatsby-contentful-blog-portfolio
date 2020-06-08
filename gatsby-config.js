@@ -20,6 +20,7 @@ module.exports = {
     siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
+    "gatsby-plugin-preact",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
@@ -33,7 +34,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
