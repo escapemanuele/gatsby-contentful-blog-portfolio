@@ -1,8 +1,8 @@
 import React from "react"
-import FaDraftingCompass from "react-icons/fa/FaDraftingCompass"
-import FaLaptopCode from "react-icons/fa/FaLaptopCode"
-import FaHardHat from "react-icons/fa/FaHardHat"
-import FaFeatherAlt from "react-icons/fa/FaFeatherAlt"
+import {FaDraftingCompass} from "react-icons/fa"
+import {FaLaptopCode} from "react-icons/fa"
+import {FaHardHat} from "react-icons/fa"
+import {FaFeatherAlt} from "react-icons/fa"
 
 export default [
   {
