@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 

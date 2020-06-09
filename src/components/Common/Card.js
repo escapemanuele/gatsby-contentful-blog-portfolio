@@ -3,14 +3,9 @@ import styles from "../../css/blog-card.module.css"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import moment from "moment"
-import "moment/locale/it"
 
 const Card = ({ node }) => {
   const { slug, title, image, date, category } = node
-
-  var momentLocale = moment()
-  momentLocale.locale("it")
 
   return (
     <article className={styles.blog}>
@@ -29,7 +24,7 @@ const Card = ({ node }) => {
         </Link>
         {date && (
           <h6 className={styles.date}>
-            {moment(date).format(`MMMM DD, YYYY`)}
+            {DateText(date)}
           </h6>
         )}
       </div>
@@ -38,6 +33,15 @@ const Card = ({ node }) => {
       </div>
     </article>
   )
+}
+
+function DateText( date ) {
+  const formattedTime = new Date(date);
+  const formattedDate = formattedTime.toLocaleDateString('en-US', {
+     day: 'numeric', month: 'long', year: 'numeric'
+  }).replace(/ /g, ' ');
+
+  return formattedDate
 }
 
 Card.propTypes = {
