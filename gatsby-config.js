@@ -61,6 +61,15 @@ module.exports = {
         icon: `static/images/icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-subfont`,
+      options: {
+        silent: true,
+        fallback: false,
+        inlineFonts: true,
+      },
+    },
     `gatsby-plugin-offline`,
+    // `gatsby-plugin-no-javascript`,
   ],
 }

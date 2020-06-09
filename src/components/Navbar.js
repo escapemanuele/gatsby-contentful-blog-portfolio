@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import styles from "../css/navbar.module.css"
-import {FaAlignRight} from "react-icons/fa"
+import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import Logo from "../../static/images/logo.png"
 
@@ -40,7 +40,7 @@ const Navbar = () => {
           {links.map((item, index) => {
             return (
               <li key={index}>
-                <Link to={item.path} data-cy={item.text}>
+                <Link to={item.path} data-cy={item.text} activeClassName={styles.active}>
                   {item.text}
                 </Link>
               </li>
