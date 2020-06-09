@@ -22,11 +22,7 @@ const Card = ({ node }) => {
         >
           open
         </Link>
-        {date && (
-          <h6 className={styles.date}>
-            {DateText(date)}
-          </h6>
-        )}
+        {date && <h6 className={styles.date}>{DateText(date)}</h6>}
       </div>
       <div className={styles.footer}>
         <h4>{title}</h4>
@@ -35,11 +31,15 @@ const Card = ({ node }) => {
   )
 }
 
-function DateText( date ) {
-  const formattedTime = new Date(date);
-  const formattedDate = formattedTime.toLocaleDateString('en-US', {
-     day: 'numeric', month: 'long', year: 'numeric'
-  }).replace(/ /g, ' ');
+function DateText(date) {
+  const formattedTime = new Date(date)
+  const formattedDate = formattedTime
+    .toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+    .replace(/ /g, " ")
 
   return formattedDate
 }

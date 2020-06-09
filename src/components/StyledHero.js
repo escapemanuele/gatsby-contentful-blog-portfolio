@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -21,7 +20,7 @@ const getDefaultImage = graphql`
   {
     file(relativePath: { eq: "index-hero.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 1900) {
+        fluid(quality: 90, maxWidth: 1400) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

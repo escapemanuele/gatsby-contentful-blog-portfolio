@@ -9,7 +9,6 @@ import SEO from "../components/SEO"
 import StyledHero from "../components/StyledHero"
 
 const BlogTemplate = ({ data }) => {
-
   const {
     title,
     date: published,
@@ -42,11 +41,15 @@ const BlogTemplate = ({ data }) => {
   )
 }
 
-function DateText( date ) {
-  const formattedTime = new Date(date);
-  const formattedDate = formattedTime.toLocaleDateString('en-US', {
-     day: 'numeric', month: 'long', year: 'numeric'
-  }).replace(/ /g, ' ');
+function DateText(date) {
+  const formattedTime = new Date(date)
+  const formattedDate = formattedTime
+    .toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+    .replace(/ /g, " ")
 
   return formattedDate
 }
