@@ -20,6 +20,12 @@ module.exports = {
     siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: true,
+      },
+    },
     "gatsby-plugin-preact",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
