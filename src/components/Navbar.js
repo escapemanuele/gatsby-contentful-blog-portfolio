@@ -40,7 +40,11 @@ const Navbar = () => {
           {links.map((item, index) => {
             return (
               <li key={index}>
-                <Link to={item.path} data-cy={item.text} activeClassName={styles.active}>
+                <Link
+                  to={item.path}
+                  data-cy={item.text}
+                  activeClassName={styles.active}
+                >
                   {item.text}
                 </Link>
               </li>
