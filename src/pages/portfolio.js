@@ -24,7 +24,7 @@ export const getPortfolioImage = graphql`
   query {
     contactImage: file(relativePath: { eq: "portfolio-header.jpg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 1400) {
+        fluid(quality: 50, maxWidth: 1400) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
