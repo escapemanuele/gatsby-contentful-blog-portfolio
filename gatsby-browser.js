@@ -1,2 +1,2 @@
-require("typeface-lato");
-require("typeface-poppins");
+require("typeface-lato")
+require("typeface-poppins")

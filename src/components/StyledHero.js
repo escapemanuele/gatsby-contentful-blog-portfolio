@@ -4,29 +4,12 @@ import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
 
 const StyledHero = ({ img, className, children, home }) => {
-  const data = useStaticQuery(getDefaultImage)
-  const defaultImage = data.file.childImageSharp.fluid
-
-  let mainImage = img ? img : defaultImage
-
   return (
-    <BackgroundImage className={className} fluid={mainImage}>
+    <BackgroundImage className={className} fluid={img}>
       {children}
     </BackgroundImage>
   )
 }
-
-const getDefaultImage = graphql`
-  {
-    file(relativePath: { eq: "index-hero.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 1400) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
 
 export default styled(StyledHero)`
     min-height: ${props => (props.home ? "calc(100vh - 62px)" : "50vh")};

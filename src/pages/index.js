@@ -22,7 +22,7 @@ const Index = ({ data }) => {
 
 export const getIndexData = graphql`
   query {
-    homeImage: file(relativePath: { eq: "index-hero.jpg" }) {
+    homeImage: file(relativePath: { eq: "index-hero.webp" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 1400) {
           ...GatsbyImageSharpFluid_withWebp
