@@ -4,10 +4,10 @@ import styled from "styled-components"
 const Title = ({ title, subtitle, className }) => {
   return (
     <div className={className}>
-      <h4>
+      <h2>
         <span className="title">{title}</span>
         <span>{subtitle}</span>
-      </h4>
+      </h2>
     </div>
   )
 }
