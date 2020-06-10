@@ -8,6 +8,29 @@ const EmailContact = () => {
     <section>
       <Title title="Contact us" subtitle="now" />
       <div>
+        <form id="contactForm">
+          <label>Name</label>
+          <input type="text" placeholder="Name" name="name" required />
+          <label>Email Address</label>
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <label>Message</label>
+          <textarea
+            rows="5"
+            placeholder="Message"
+            name="content"
+            required
+          ></textarea>
+          <div id="toast"></div>
+          <button type="submit" id="submit">
+            Send
+          </button>
+        </form>
+
         <form
           action="https://formspree.io/..."
           method="POST"

@@ -1,20 +1,14 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styles from "../css/single-blog.module.css"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import moment from "moment"
-import "moment/locale/it"
 import styled from "styled-components"
 import RichTextDisplay from "../components/Blog/RichTextDisplay"
 import SEO from "../components/SEO"
 import StyledHero from "../components/StyledHero"
 
 const BlogTemplate = ({ data }) => {
-  var momentLocale = moment()
-  momentLocale.locale("it")
-
   const {
     title,
     date: published,
@@ -28,13 +22,13 @@ const BlogTemplate = ({ data }) => {
       <BlogWrapper>
         <StyledHero img={image.fluid} className="post-image" />
         <div className="post-container">
-          <AniLink fade to="/blog" className="btn-primary">
+          <Link to="/blog" className="btn-primary">
             All the articles
-          </AniLink>
+          </Link>
           <div className="content-container">
             <h1 className="content-title">{title}</h1>
             <h4 className="content-published">
-              Published: {moment(published).format(`MMMM DD, YYYY`)}
+              Published: {DateText(published)}
             </h4>
             <hr />
             <article className={styles.post}>
@@ -45,6 +39,19 @@ const BlogTemplate = ({ data }) => {
       </BlogWrapper>
     </Layout>
   )
+}
+
+function DateText(date) {
+  const formattedTime = new Date(date)
+  const formattedDate = formattedTime
+    .toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+    .replace(/ /g, " ")
+
+  return formattedDate
 }
 
 const BlogWrapper = styled.article`

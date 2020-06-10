@@ -24,6 +24,11 @@
   height: 0;
   overflow: hidden;
 }
+
+.active {
+  text-decoration: underline !important;
+}
+
 .show-nav {
   height: 216px;
 }

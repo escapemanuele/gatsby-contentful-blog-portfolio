@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import styles from "../css/template.module.css"
 import Image from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/SEO"
 
@@ -43,14 +43,13 @@ const PortfolioItemTemplate = ({ data }) => {
           </div>
           <h2>{title}</h2>
           {desc && <p className={styles.desc}>{desc}</p>}
-          <AniLink
-            fade
+          <Link
             to={`/${slug}`}
             className="btn-primary"
             style={{ marginTop: "3rem" }}
           >
             back to {slug}
-          </AniLink>
+          </Link>
         </div>
       </section>
     </Layout>

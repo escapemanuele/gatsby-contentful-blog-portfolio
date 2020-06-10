@@ -1,16 +1,11 @@
 import React from "react"
 import styles from "../../css/blog-card.module.css"
 import Image from "gatsby-image"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import moment from "moment"
-import "moment/locale/it"
 
 const Card = ({ node }) => {
   const { slug, title, image, date, category } = node
-
-  var momentLocale = moment()
-  momentLocale.locale("it")
 
   return (
     <article className={styles.blog}>
@@ -20,25 +15,33 @@ const Card = ({ node }) => {
           className={styles.img}
           style={{ height: "100%" }}
         />
-        <AniLink
-          fade
+        <Link
           className={styles.link}
           to={`/${category.slug}/${slug}`}
           data-cy="portfolio-item"
         >
           open
-        </AniLink>
-        {date && (
-          <h6 className={styles.date}>
-            {moment(date).format(`MMMM DD, YYYY`)}
-          </h6>
-        )}
+        </Link>
+        {date && <h6 className={styles.date}>{DateText(date)}</h6>}
       </div>
       <div className={styles.footer}>
         <h4>{title}</h4>
       </div>
     </article>
   )
+}
+
+function DateText(date) {
+  const formattedTime = new Date(date)
+  const formattedDate = formattedTime
+    .toLocaleDateString("en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    })
+    .replace(/ /g, " ")
+
+  return formattedDate
 }
 
 Card.propTypes = {

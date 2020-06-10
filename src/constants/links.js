@@ -4,7 +4,7 @@ export default [
     text: "home",
   },
   {
-    path: "/portfolio",
+    path: "/portfolio/",
     text: "portfolio",
   },
   // {
@@ -12,11 +12,11 @@ export default [
   //   text: "blog",
   // },
   {
-    path: "/blog",
+    path: "/blog/",
     text: "blog",
   },
   {
-    path: "/contact",
+    path: "/contact/",
     text: "contacts",
   },
 ]
