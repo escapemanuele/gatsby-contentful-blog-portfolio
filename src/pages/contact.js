@@ -35,7 +35,7 @@ const ContactWrapper = styled.div`
 
 export const getContactImage = graphql`
   query {
-    contactImage: file(relativePath: { eq: "connectBcg.jpeg" }) {
+    contactImage: file(relativePath: { eq: "connectBcg.webp" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 1400) {
           ...GatsbyImageSharpFluid_withWebp
