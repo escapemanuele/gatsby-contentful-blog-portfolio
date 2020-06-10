@@ -26,14 +26,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-subfont`,
-      options: {
-        silent: true,
-        fallback: false,
-        inlineFonts: true,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
