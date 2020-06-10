@@ -37,7 +37,7 @@ export const getContactImage = graphql`
   query {
     contactImage: file(relativePath: { eq: "connectBcg.jpeg" }) {
       childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
+        fluid(quality: 90, maxWidth: 1400) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
