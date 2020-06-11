@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/" data-cy="logo">
-            <Img fixed={data.logo.childImageSharp.fixed} />
+            <Img fixed={data.logo.childImageSharp.fixed} alt="Homepage" />
           </Link>
 
           <button
