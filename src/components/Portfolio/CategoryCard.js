@@ -8,7 +8,7 @@ const CategoryCard = ({ category }) => {
   const { title, image, slug } = category
 
   return (
-    <CategoryWrapper fade to={`/${slug}`} data-cy="portfolio-category">
+    <CategoryWrapper to={`/${slug}`} data-cy="portfolio-category">
       <Image className="category-image" fluid={image.fluid} />
       <div className="category-info">{title}</div>
     </CategoryWrapper>
@@ -21,13 +21,13 @@ const CategoryWrapper = styled(Link)`
   grid-template-rows: 1;
 
   text-decoration: none;
-  background: var(--primaryColor);
-  color: var(--mainWhite);
-  box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);
+  background: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.mainWhite};
+  box-shadow: ${props => props.theme.lightShadow};
+  transition: ${props => props.theme.mainTransition};
 
   &:hover {
-    box-shadow: var(--darkShadow);
+    box-shadow: ${props => props.theme.darkShadow};
   }
 
   &:hover .category-image {
@@ -38,7 +38,7 @@ const CategoryWrapper = styled(Link)`
     grid-column: 1 / -1;
     grid-row: 1 / -1;
 
-    transition: var(--mainTransition);
+    transition: ${props => props.theme.mainTransition};
 
     background-size: cover;
   }
@@ -49,7 +49,7 @@ const CategoryWrapper = styled(Link)`
 
     font-size: 1rem;
     font-weight: 600;
-    color: var(--mainWhite);
+    color:  ${props => props.theme.mainWhite};
   }
 
   @media (min-width: 780px) {

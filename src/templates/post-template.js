@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
-import styles from "../css/single-blog.module.css"
 
 import styled from "styled-components"
 import RichTextDisplay from "../components/Blog/RichTextDisplay"
@@ -31,7 +30,7 @@ const BlogTemplate = ({ data }) => {
               Published: {DateText(published)}
             </h4>
             <hr />
-            <article className={styles.post}>
+            <article className="post">
               <RichTextDisplay json={json} />
             </article>
           </div>
@@ -83,6 +82,14 @@ const BlogWrapper = styled.article`
       .content-published {
         text-transform: capitalize;
       }
+
+      .post {
+        margin: 2rem 0;
+      }
+
+      .post img {
+        max-width: 70vw;
+      }
     }
   }
 
@@ -108,7 +115,7 @@ export const getPost = graphql`
         json
       }
       image {
-        fluid(maxWidth: 2048) {
+        fluid(maxWidth: 1024) {
           ...GatsbyContentfulFluid
         }
       }

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import styles from "../css/template.module.css"
+import { PortfolioItemWrapper } from '../css'
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -28,21 +28,21 @@ const PortfolioItemTemplate = ({ data }) => {
           </div>
         </ImageWrapper>
       </HeaderStructureWrapper>
-      <section className={styles.template}>
-        <div className={styles.center}>
-          <div className={styles.images}>
+      <PortfolioItemWrapper>
+        <div className="center">
+          <div className="images">
             {itemImages.map((item, index) => {
               return (
                 <Image
                   key={index}
                   fluid={item.fluid}
-                  className={styles.image}
+                  className="image"
                 />
               )
             })}
           </div>
           <h2>{title}</h2>
-          {desc && <p className={styles.desc}>{desc}</p>}
+          {desc && <p className="desc">{desc}</p>}
           <Link
             to={`/${slug}`}
             className="btn-primary"
@@ -51,7 +51,7 @@ const PortfolioItemTemplate = ({ data }) => {
             back to {slug}
           </Link>
         </div>
-      </section>
+      </PortfolioItemWrapper>
     </Layout>
   )
 }

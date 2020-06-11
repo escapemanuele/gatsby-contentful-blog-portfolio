@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import styles from "../css/blog.module.css"
+import { PageContainerWrapper } from '../css'
 import SEO from "../components/SEO"
 import PortfolioList from "../components/Portfolio/PortfolioList"
 
@@ -11,7 +11,7 @@ const PortoflioCategory = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <CategoryWrapper className={styles.blog}>
+      <CategoryWrapper>
         <h1>{title}</h1>
         <Link
           to={`/portfolio`}
@@ -26,7 +26,7 @@ const PortoflioCategory = ({ data }) => {
   )
 }
 
-const CategoryWrapper = styled.section`
+const CategoryWrapper = styled(PageContainerWrapper)`
   h1 {
     text-align: center;
     font-size: 3rem;

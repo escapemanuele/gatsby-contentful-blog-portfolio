@@ -1,13 +1,13 @@
 import React from "react"
-import styles from "../css/banner.module.css"
+import { BannerWrapper } from '../css'
 
 const Banner = ({ title, info, children }) => {
   return (
-    <div className={styles.banner}>
+    <BannerWrapper>
       <p>{info}</p>
       <h1>{title}</h1>
       {children}
-    </div>
+    </BannerWrapper>
   )
 }
 

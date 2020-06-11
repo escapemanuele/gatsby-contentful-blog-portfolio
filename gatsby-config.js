@@ -23,9 +23,7 @@ module.exports = {
     "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-preact",
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-purgecss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

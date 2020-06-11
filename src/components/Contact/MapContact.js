@@ -24,11 +24,11 @@ const MapContact = () => {
 }
 
 const MapWrapper = styled.div`
-  box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);
+  box-shadow: ${props => props.theme.lightShadow};
+  transition: ${props => props.theme.mainTransition};
 
   &:hover {
-    box-shadow: var(--darkShadow);
+    box-shadow: ${props => props.theme.darkShadow};
   }
 `
 

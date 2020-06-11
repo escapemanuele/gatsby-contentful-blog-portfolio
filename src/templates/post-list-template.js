@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
-import styles from "../css/blog.module.css"
+import { PageContainerWrapper } from '../css'
 import Title from "../components/Title"
 import Card from "../components/Common/Card"
 import SEO from "../components/SEO"
@@ -10,7 +10,6 @@ import SEO from "../components/SEO"
 const BlogListTemplate = props => {
   const { currentPage, numPages } = props.pageContext
   const { data } = props
-  // const {blogImage} = useStaticQuery(getBlogImage)
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
@@ -21,12 +20,12 @@ const BlogListTemplate = props => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <section className={styles.blog}>
+      <PageContainerWrapper>
         <Title title="last" subtitle="articles" />
         {!(isFirst && isLast) && (
-          <section className={styles.links}>
+          <section className="links">
             {!isFirst && (
-              <Link to={previousPage} className={styles.link}>
+              <Link to={previousPage} className="link">
                 Previous
               </Link>
             )}
@@ -37,8 +36,8 @@ const BlogListTemplate = props => {
                   to={`/blog/${i === 0 ? "" : i + 1}`}
                   className={
                     i + 1 === currentPage
-                      ? `${styles.link} ${styles.active}`
-                      : `${styles.link}`
+                      ? `link active`
+                      : `link`
                   }
                 >
                   {i + 1}
@@ -46,18 +45,18 @@ const BlogListTemplate = props => {
               )
             })}
             {!isLast && (
-              <Link to={nextPage} className={styles.link}>
+              <Link to={nextPage} className="link">
                 Next
               </Link>
             )}
           </section>
         )}
-        <div className={styles.center} data-cy="post-list">
+        <div className="center" data-cy="post-list">
           {data.posts.edges.map(({ node }) => {
             return <Card key={node.id} node={node} />
           })}
         </div>
-      </section>
+      </PageContainerWrapper>
     </Layout>
   )
 }

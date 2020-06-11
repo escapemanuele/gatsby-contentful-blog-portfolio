@@ -18,7 +18,7 @@ export default styled(Title)`
   margin-bottom: 2rem;
   margin-top: 2rem;
 
-  h4 {
+  h2 {
     text-align: center;
     letter-spacing: 7px;
     color: var(--primaryColor);

@@ -17,8 +17,8 @@ const ProjectWithUs = () => {
 }
 
 const ProjectWrapper = styled.section`
-  background: var(--primaryColor);
-  color: var(--mainWhite);
+  background: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.mainWhite};
   padding: 2rem;
 
   display: flex;
@@ -33,18 +33,18 @@ const ProjectWrapper = styled.section`
 
     a {
       text-decoration: none;
-      color: var(--mainWhite);
-      border: 2px solid var(--mainWhite);
+      color: ${props => props.theme.mainWhite};
+      border: 2px solid ${props => props.theme.mainWhite};
       padding: 1rem;
       text-align: center;
       border-radius: 2rem;
       width: 150px;
       margin-top: 1rem;
-      transition: var(--mainTransition);
+      transition: ${props => props.theme.mainTransition};
 
       &:hover {
-        background: var(--mainWhite);
-        color: var(--primaryColor);
+        background: ${props => props.theme.mainWhite};
+        color: ${props => props.theme.primaryColor};
         transform: scale(1.1);
       }
     }
