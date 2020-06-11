@@ -1,6 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
+<<<<<<< HEAD
+import styles from "../css/single-blog.module.css"
+=======
+>>>>>>> release/1.0
 
 import styled from "styled-components"
 import RichTextDisplay from "../components/Blog/RichTextDisplay"

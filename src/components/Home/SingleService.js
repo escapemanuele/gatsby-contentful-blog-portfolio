@@ -22,7 +22,7 @@ const ServiceWrapper = styled.article`
     padding-right: 1rem;
     font-size: 2rem;
     font-weight: 200;
-    color: var(--primaryColor);
+    color: ${props => props.theme.primaryColor};
   }
 
   .service_info {

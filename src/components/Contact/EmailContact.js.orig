@@ -1,0 +1,124 @@
+import React from "react"
+import Title from "../Title"
+import { ContactFormWrapper } from "../../css"
+import { emailStrings } from "./ContactStrings"
+
+const EmailContact = () => {
+  return (
+    <section>
+      <Title title="Contact us" subtitle="now" />
+<<<<<<< HEAD
+      <div>
+        <form id="contactForm">
+          <label>Name</label>
+          <input type="text" placeholder="Name" name="name" required />
+          <label>Email Address</label>
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <label>Message</label>
+          <textarea
+            rows="5"
+            placeholder="Message"
+            name="content"
+            required
+          ></textarea>
+          <div id="toast"></div>
+          <button type="submit" id="submit">
+            Send
+          </button>
+        </form>
+
+        <form
+          action="https://formspree.io/..."
+          method="POST"
+          className={styles.form}
+        >
+          <div>
+            <label htmlFor="name">name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className={styles.formControl}
+              placeholder={emailStrings.namePlaceholder}
+            />
+          </div>
+          <div>
+            <label htmlFor="email">email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className={styles.formControl}
+              placeholder={emailStrings.emailPlaceholder}
+            />
+          </div>
+          <div>
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="10"
+              className={styles.formControl}
+              placeholder={emailStrings.messagePlaceholder}
+            />
+          </div>
+          <div>
+            <input
+              type="submit"
+              value={emailStrings.submitText}
+              className={styles.submit}
+            />
+          </div>
+        </form>
+      </div>
+=======
+      <ContactFormWrapper action="https://formspree.io/..." method="POST">
+        <div>
+          <label htmlFor="name">name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            className="formControl"
+            placeholder={emailStrings.namePlaceholder}
+          />
+        </div>
+        <div>
+          <label htmlFor="email">email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className="formControl"
+            placeholder={emailStrings.emailPlaceholder}
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="10"
+            className="formControl"
+            placeholder={emailStrings.messagePlaceholder}
+          />
+        </div>
+        <div>
+          <input
+            type="submit"
+            value={emailStrings.submitText}
+            className="submit"
+          />
+        </div>
+      </ContactFormWrapper>
+>>>>>>> release/1.0
+    </section>
+  )
+}
+
+export default EmailContact

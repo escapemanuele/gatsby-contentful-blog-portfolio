@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import links from "../constants/links"
-import styles from "../css/footer.module.css"
+import { FooterWrapper } from "../css"
 
 const Footer = () => {
   const linkProfilo =
     process.env.LINK_URL || "https://www.linkedin.com/in/ebuccelli/"
   return (
-    <footer className={styles.footer}>
-      <div className={styles.links}>
+    <FooterWrapper>
+      <div className="links">
         {links.map((item, index) => {
           return (
             <Link key={index} to={item.path}>
@@ -17,22 +17,15 @@ const Footer = () => {
           )
         })}
       </div>
-      {/* <div className={styles.icons}>
-                {SocialIcons.map((item,index) => {
-                    return <a key={index} href={item.url} target="_blank" rel="noopener noreferrer">
-                        {item.icon}
-                    </a>
-                })}
-            </div> */}
-      <div className={styles.copyright}>
+      <div className="copyright">
         copyright &copy; XXXXXXXXXX {new Date().getFullYear()} All rights
         reserved
       </div>
-      <div className={styles.copyright}>Street N° XXXXX</div>
-      <div className={styles.created}>
+      <div className="copyright">Street N° XXXXX</div>
+      <div className="created">
         Created by <a href={linkProfilo}>Emanuele Buccelli</a>
       </div>
-    </footer>
+    </FooterWrapper>
   )
 }
 

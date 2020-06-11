@@ -1,0 +1,52 @@
+import React from "react"
+import Navbar from "./Navbar"
+import Footer from "./Footer"
+<<<<<<< HEAD
+import { createGlobalStyle } from "styled-components"
+import "./layout.css"
+=======
+import { ThemeProvider } from "styled-components"
+import { Theme, GlobalStyle } from "../css"
+>>>>>>> release/1.0
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-display: swap;
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-display: swap;
+    margin-bottom: 1.25rem;
+  }
+`
+
+const Layout = ({ children }) => {
+  return (
+    <main>
+<<<<<<< HEAD
+      <GlobalStyle />
+      <Navbar />
+      {children}
+      <Footer />
+=======
+      <ThemeProvider theme={Theme}>
+        <GlobalStyle />
+        <Navbar />
+        {children}
+        <Footer />
+      </ThemeProvider>
+>>>>>>> release/1.0
+    </main>
+  )
+}
+
+export default Layout

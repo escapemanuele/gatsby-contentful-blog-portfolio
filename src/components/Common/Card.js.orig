@@ -8,16 +8,33 @@ const Card = ({ node }) => {
   const { slug, title, image, date, category } = node
 
   return (
+<<<<<<< HEAD
+    <article className={styles.blog}>
+      <div className={styles.imgContainer}>
+        <Image
+          fluid={image.fluid}
+          className={styles.img}
+          style={{ height: "100%" }}
+        />
+        <Link
+          className={styles.link}
+=======
     <CardWrapper>
       <div className="img-container">
         <Image fluid={image.fluid} className="img" style={{ height: "100%" }} />
         <Link
-          className="link"          to={`/${category.slug}/${slug}`}
+          className="link"
+>>>>>>> release/1.0
+          to={`/${category.slug}/${slug}`}
           data-cy="portfolio-item"
         >
           open
         </Link>
+<<<<<<< HEAD
+        {date && <h6 className={styles.date}>{DateText(date)}</h6>}
+=======
         {date && <h6 className="date">{DateText(date)}</h6>}
+>>>>>>> release/1.0
       </div>
       <div className="footer">
         <h4>{title}</h4>

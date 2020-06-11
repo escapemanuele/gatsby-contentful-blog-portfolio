@@ -36,7 +36,11 @@ const PortfolioItemTemplate = ({ data }) => {
             })}
           </div>
           <h2>{title}</h2>
+<<<<<<< HEAD
+          {desc && <p className={styles.desc}>{desc}</p>}
+=======
           {desc && <p className="desc">{desc}</p>}
+>>>>>>> release/1.0
           <Link
             to={`/${slug}`}
             className="btn-primary"

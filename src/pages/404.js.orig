@@ -3,6 +3,11 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import Banner from "../components/Banner"
+<<<<<<< HEAD
+import styles from "../css/error.module.css"
+import { Link } from "gatsby"
+=======
+>>>>>>> release/1.0
 
 const Error = () => {
   return (
