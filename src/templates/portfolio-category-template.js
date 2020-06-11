@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import { PageContainerWrapper } from '../css'
+import { PageContainerWrapper } from "../css"
 import SEO from "../components/SEO"
 import PortfolioList from "../components/Portfolio/PortfolioList"
 

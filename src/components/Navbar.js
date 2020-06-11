@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
-import { NavbarWrapper } from '../css'
+import { NavbarWrapper } from "../css"
 
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)
@@ -32,13 +32,7 @@ const Navbar = () => {
             <FaAlignRight className="logo-icon" />
           </button>
         </div>
-        <ul
-          className={
-            isOpen
-              ? `nav-links show-nav`
-              : `nav-links`
-          }
-        >
+        <ul className={isOpen ? `nav-links show-nav` : `nav-links`}>
           {links.map((item, index) => {
             return (
               <li key={index}>

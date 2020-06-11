@@ -1,5 +1,5 @@
 import React from "react"
-import { CardWrapper } from '../../css'
+import { CardWrapper } from "../../css"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
@@ -10,11 +10,7 @@ const Card = ({ node }) => {
   return (
     <CardWrapper>
       <div className="img-container">
-        <Image
-          fluid={image.fluid}
-          className="img"
-          style={{ height: "100%" }}
-        />
+        <Image fluid={image.fluid} className="img" style={{ height: "100%" }} />
         <Link
           className="link"
           to={`/${category.slug}/${slug}`}

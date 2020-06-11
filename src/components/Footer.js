@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import links from "../constants/links"
-import { FooterWrapper } from '../css'
+import { FooterWrapper } from "../css"
 
 const Footer = () => {
   const linkProfilo =

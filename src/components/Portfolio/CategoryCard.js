@@ -49,7 +49,7 @@ const CategoryWrapper = styled(Link)`
 
     font-size: 1rem;
     font-weight: 600;
-    color:  ${props => props.theme.mainWhite};
+    color: ${props => props.theme.mainWhite};
   }
 
   @media (min-width: 780px) {

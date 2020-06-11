@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import { PortfolioItemWrapper } from '../css'
+import { PortfolioItemWrapper } from "../css"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -32,13 +32,7 @@ const PortfolioItemTemplate = ({ data }) => {
         <div className="center">
           <div className="images">
             {itemImages.map((item, index) => {
-              return (
-                <Image
-                  key={index}
-                  fluid={item.fluid}
-                  className="image"
-                />
-              )
+              return <Image key={index} fluid={item.fluid} className="image" />
             })}
           </div>
           <h2>{title}</h2>

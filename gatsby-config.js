@@ -52,7 +52,7 @@ module.exports = {
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
         display: `standalone`,
-        icon: `static/images/icon.png`,
+        icon: `static/images/kratos.png`,
       },
     },
     // {

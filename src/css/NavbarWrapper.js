@@ -1,7 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const NavbarWrapper = styled.nav`
-
   .nav-header {
     display: flex;
     justify-content: space-between;
@@ -33,7 +32,7 @@ const NavbarWrapper = styled.nav`
     height: 0;
     overflow: hidden;
   }
-  
+
   .nav-links a {
     display: block;
     padding: 1rem 1.25rem;
@@ -57,7 +56,7 @@ const NavbarWrapper = styled.nav`
   }
 
   @media screen and (min-width: 576px) {
-      padding: 0 2rem;
+    padding: 0 2rem;
   }
 
   @media screen and (min-width: 992px) {

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
-import { PageContainerWrapper } from '../css'
+import { PageContainerWrapper } from "../css"
 import Title from "../components/Title"
 import Card from "../components/Common/Card"
 import SEO from "../components/SEO"
@@ -34,11 +34,7 @@ const BlogListTemplate = props => {
                 <Link
                   key={i}
                   to={`/blog/${i === 0 ? "" : i + 1}`}
-                  className={
-                    i + 1 === currentPage
-                      ? `link active`
-                      : `link`
-                  }
+                  className={i + 1 === currentPage ? `link active` : `link`}
                 >
                   {i + 1}
                 </Link>

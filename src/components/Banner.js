@@ -1,5 +1,5 @@
 import React from "react"
-import { BannerWrapper } from '../css'
+import { BannerWrapper } from "../css"
 
 const Banner = ({ title, info, children }) => {
   return (
