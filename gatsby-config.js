@@ -20,9 +20,10 @@ module.exports = {
     siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
-	"gatsby-plugin-preact",
+    "gatsby-plugin-preact",
     "gatsby-plugin-preload-link-crossorigin",
-    `gatsby-plugin-preload-fonts`,    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-preload-fonts`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,

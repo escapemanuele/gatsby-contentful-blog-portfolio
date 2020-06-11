@@ -12,7 +12,8 @@ const Card = ({ node }) => {
       <div className="img-container">
         <Image fluid={image.fluid} className="img" style={{ height: "100%" }} />
         <Link
-          className="link"          to={`/${category.slug}/${slug}`}
+          className="link"
+          to={`/${category.slug}/${slug}`}
           data-cy="portfolio-item"
         >
           open
