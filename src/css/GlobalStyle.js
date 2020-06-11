@@ -33,7 +33,7 @@ export default createGlobalStyle`
     .defaultHero {
         min-height: calc(100vh - 62px);
         background: linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)),
-            url("../../static/images/index-hero.jpg") center/cover no-repeat;
+            url("../../static/images/index-hero.webp") center/cover no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -16,7 +16,7 @@ module.exports = {
     description: "Gatsby+Contentful for a website with a blog and a portfolio",
     author: "Emanuele Buccelli",
     twitterUsername: "@escapemanuele",
-    image: "/index-hero.jpg",
+    image: "/index-hero.webp",
     siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
