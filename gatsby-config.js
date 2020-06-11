@@ -22,6 +22,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-preact",
     "gatsby-plugin-preload-link-crossorigin",
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
