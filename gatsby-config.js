@@ -52,18 +52,8 @@ module.exports = {
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
         display: `standalone`,
-        icon: `static/images/icon.png`,
-        cache_busting_mode: 'none'
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        workboxConfig: {
-           globPatterns: ['**/*']
-        }
-     }
-    }
     // {
     //   resolve: `gatsby-plugin-subfont`,
     //   options: {
@@ -72,6 +62,7 @@ module.exports = {
     //     inlineFonts: true,
     //   },
     // },
+    `gatsby-plugin-offline`,
     // `gatsby-plugin-no-javascript`,
   ],
 }
