@@ -26,10 +26,6 @@ const Footer = () => {
         Created by <a href={linkProfilo}>Emanuele Buccelli</a>
       </div>
       <div id="wcb" class="wcb carbonbadge wcb-d"></div>
-      <script
-        src="https://unpkg.com/website-carbon-badges@^1/b.min.js"
-        defer
-      ></script>
     </FooterWrapper>
   )
 }
