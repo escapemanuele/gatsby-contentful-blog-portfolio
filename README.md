@@ -24,7 +24,7 @@ Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/elle
 - Graphql
 - Contenful
 - Cypress
-- CSS Modules and Styled Components
+- Styled Components
 - PWA
 
 ### If this project helped you, please consider giving it a star! It would mean a lot to me :)
