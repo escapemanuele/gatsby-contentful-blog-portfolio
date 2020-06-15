@@ -46,7 +46,11 @@ const CarbonBadge = () => {
   }
 
   return (
-    <CarbonWrapper href="https://www.websitecarbon.com/" target="_blank" title="websitecarbon">
+    <CarbonWrapper
+      href="https://www.websitecarbon.com/"
+      target="_blank"
+      title="websitecarbon"
+    >
       {!carbon.error && (
         <div className="success">
           <span>
