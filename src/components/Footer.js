@@ -2,11 +2,9 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import links from "../constants/links"
 import { FooterWrapper } from "../css"
-import CarbonBadge from "./carbon"
+import CarbonBadge from "./Carbon"
 
 const Footer = () => {
-  
-
   const linkProfilo =
     process.env.LINK_URL || "https://www.linkedin.com/in/ebuccelli/"
   return (
