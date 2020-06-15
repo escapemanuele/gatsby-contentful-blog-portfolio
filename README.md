@@ -14,8 +14,9 @@ This is a simple project built for a local architect. It shows its portfolio and
 [![Open Source
 Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
+![Lighthouse performance](./media/lighthouse.jpg)
+[![Carbon](./media/clean.jpg)](https://www.websitecarbon.com/)
 ![Gatsby Starter Mate logo](./media/gatsby-starter-index.png)
-[![Lighthouse performance](.media/lighthouse.jpg)](https://www.websitecarbon.com/)
 
 ## Features
 
@@ -23,7 +24,7 @@ Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/elle
 - Graphql
 - Contenful
 - Cypress
-- CSS Modules and Styled Components
+- Styled Components
 - PWA
 
 ### If this project helped you, please consider giving it a star! It would mean a lot to me :)
