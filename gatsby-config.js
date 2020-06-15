@@ -56,15 +56,6 @@ module.exports = {
         display: `standalone`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-subfont`,
-    //   options: {
-    //     silent: true,
-    //     fallback: false,
-    //     inlineFonts: true,
-    //   },
-    // },
     `gatsby-plugin-offline`,
-    // `gatsby-plugin-no-javascript`,
   ],
 }
