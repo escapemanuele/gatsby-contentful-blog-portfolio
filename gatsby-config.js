@@ -65,6 +65,6 @@ module.exports = {
     //   },
     // },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-no-javascript`,
+    // `gatsby-plugin-no-javascript`,
   ],
 }

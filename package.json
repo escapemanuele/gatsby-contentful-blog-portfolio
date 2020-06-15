@@ -41,6 +41,7 @@
     "gatsby-plugin-react-helmet": "^3.1.4",
     "gatsby-plugin-sharp": "^2.2.12",
     "gatsby-plugin-styled-components": "^3.1.2",
+    "gatsby-plugin-webpack-entry": "^1.0.1",
     "gatsby-source-contentful": "^2.1.78",
     "gatsby-source-filesystem": "^2.1.9",
     "gatsby-transformer-sharp": "^2.2.6",
