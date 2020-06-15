@@ -46,7 +46,12 @@ const CarbonBadge = () => {
   }
 
   return (
-    <CarbonWrapper href="https://www.websitecarbon.com/" target="_blank">
+    <CarbonWrapper
+      href="https://www.websitecarbon.com/"
+      target="_blank"
+      rel="noopener"
+      title="websitecarbon"
+    >
       {!carbon.error && (
         <div className="success">
           <span>
@@ -69,8 +74,11 @@ const CarbonWrapper = styled.a`
     margin: 0 auto;
 
     span {
-      background: ${props => props.theme.mainWhite};
+
+      background: ${props => props.theme.mainBlack};
       border: 2px solid ${props => props.theme.ecoGreen};
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       color: ${props => props.theme.ecoGreen};
       display: block;
       padding: 0.5rem;
@@ -78,7 +86,9 @@ const CarbonWrapper = styled.a`
 
     div {
       background: ${props => props.theme.ecoGreen};
-      color: ${props => props.theme.mainWhite};
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      color: ${props => props.theme.mainBlack};
       padding: 0.3rem 0.5rem;
     }
   }
