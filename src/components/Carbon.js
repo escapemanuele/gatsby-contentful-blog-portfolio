@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const CarbonBadge = () => {
   const [hasMounted, setHasMounted] = useState(false)
@@ -45,10 +46,8 @@ const CarbonBadge = () => {
   }
 
   return (
-    <CarbonWrapper>
-      {carbon.error ? (
-        <div className="error">{carbon.error}</div>
-      ) : (
+    <CarbonWrapper href="https://www.websitecarbon.com/" target="_blank">
+      {!carbon.error && (
         <div className="success">
           <span>
             {carbon.c}g of CO<sub>2</sub>/view
@@ -60,7 +59,7 @@ const CarbonBadge = () => {
   )
 }
 
-const CarbonWrapper = styled.div`
+const CarbonWrapper = styled.a`
   display: inline-block;
   font-weight: 600;
   margin-top: 1rem;
