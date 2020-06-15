@@ -73,6 +73,7 @@ const CarbonWrapper = styled.a`
     margin: 0 auto;
 
     span {
+
       background: ${props => props.theme.mainBlack};
       border: 2px solid ${props => props.theme.ecoGreen};
       border-top-left-radius: 5px;
