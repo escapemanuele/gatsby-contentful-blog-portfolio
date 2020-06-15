@@ -45,7 +45,7 @@ const EmailContact = () => {
             className="submit"
           />
         </div>
-      </ContactFormWrapper>
+      </ContactFormWrapper>{" "}
     </section>
   )
 }
