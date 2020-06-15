@@ -49,6 +49,7 @@ const CarbonBadge = () => {
     <CarbonWrapper
       href="https://www.websitecarbon.com/"
       target="_blank"
+      rel="noopener"
       title="websitecarbon"
     >
       {!carbon.error && (
