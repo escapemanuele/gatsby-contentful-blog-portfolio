@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import links from "../constants/links"
 import { FooterWrapper } from "../css"
+import CarbonBadge from "./Carbon"
 
 const Footer = () => {
   const linkProfilo =
@@ -25,11 +26,7 @@ const Footer = () => {
       <div className="created">
         Created by <a href={linkProfilo}>Emanuele Buccelli</a>
       </div>
-      <div id="wcb" class="wcb carbonbadge wcb-d"></div>
-      <script
-        src="https://unpkg.com/website-carbon-badges@^1/b.min.js"
-        defer
-      ></script>
+      <CarbonBadge />
     </FooterWrapper>
   )
 }
