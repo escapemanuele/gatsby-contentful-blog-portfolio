@@ -15,6 +15,7 @@ This is a simple project built for a local architect. It shows its portfolio and
 Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 ![Gatsby Starter Mate logo](./media/gatsby-starter-index.png)
+[![Lighthouse performance](.media/lighthouse.jpg)](https://www.websitecarbon.com/)
 
 ## Features
 
