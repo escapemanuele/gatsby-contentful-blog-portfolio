@@ -1,9 +1,12 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import links from "../constants/links"
 import { FooterWrapper } from "../css"
+import CarbonBadge from "./carbon"
 
 const Footer = () => {
+  
+
   const linkProfilo =
     process.env.LINK_URL || "https://www.linkedin.com/in/ebuccelli/"
   return (
@@ -25,7 +28,7 @@ const Footer = () => {
       <div className="created">
         Created by <a href={linkProfilo}>Emanuele Buccelli</a>
       </div>
-      <div id="wcb" class="wcb carbonbadge wcb-d"></div>
+      <CarbonBadge />
     </FooterWrapper>
   )
 }
