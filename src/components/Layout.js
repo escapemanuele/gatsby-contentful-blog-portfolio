@@ -23,10 +23,7 @@ const Layout = ({ children }) => {
           window.addEventListener('load', () => quicklink.listen());
         `}
       />
-      <Script
-        src="https://unpkg.com/website-carbon-badges@^1/b.min.js"
-        defer
-      />
+      <Script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer />
     </main>
   )
 }
