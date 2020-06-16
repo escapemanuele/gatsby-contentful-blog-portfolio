@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import Img from "./Image"
 import { FaAlignRight } from "react-icons/fa"
 import links from "../constants/links"
 import { NavbarWrapper } from "../css"

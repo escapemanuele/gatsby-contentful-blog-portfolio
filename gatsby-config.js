@@ -20,8 +20,9 @@ module.exports = {
     siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
-    "gatsby-plugin-webpack-bundle-analyser-v2",
+    // "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-preact",
+    'gatsby-plugin-typescript',
     "gatsby-plugin-preload-link-crossorigin",
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-react-helmet`,
@@ -57,5 +58,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    'gatsby-plugin-no-javascript'
   ],
 }

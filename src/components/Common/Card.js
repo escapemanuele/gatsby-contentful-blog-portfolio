@@ -1,6 +1,6 @@
 import React from "react"
 import { CardWrapper } from "../../css"
-import Image from "gatsby-image"
+import Image from "../Image"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 

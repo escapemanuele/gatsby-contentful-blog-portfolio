@@ -11,9 +11,10 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" description={data.site.siteMetadata.description} />
-      <StyledHero home img={data.homeImage.childImageSharp.fluid}>
+      {/* <StyledHero home img={data.homeImage.childImageSharp.fluid}>
         <Banner title={data.site.siteMetadata.title} info="hero-title"></Banner>
-      </StyledHero>
+      </StyledHero> */}
+      <StyledHero home img={data.homeImage.childImageSharp.fluid} />
       <Services />
       <ProjectWithUs />
     </Layout>

@@ -13,9 +13,10 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO title="Contact" description="Contact us to request a quote!" />
-      <StyledHero img={data.contactImage.childImageSharp.fluid}>
+      {/* <StyledHero img={data.contactImage.childImageSharp.fluid}>
         <Banner title="Contact us!" />
-      </StyledHero>
+      </StyledHero> */}
+      <StyledHero img={data.contactImage.childImageSharp.fluid} />
       <ContactWrapper>
         <MapContact />
         <EmailContact />
