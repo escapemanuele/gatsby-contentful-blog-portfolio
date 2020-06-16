@@ -46,18 +46,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatbsy Contentful Starter`,
-        short_name: `GatsbyContentful`,
-        start_url: `/`,
-        background_color: `#6b37bf`,
-        theme_color: `#6b37bf`,
-        display: `standalone`,
-      },
-    },
-    `gatsby-plugin-offline`,
     "gatsby-plugin-no-javascript",
   ],
 }
