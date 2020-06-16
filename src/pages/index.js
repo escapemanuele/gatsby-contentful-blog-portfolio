@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Banner from "../components/Banner"
 import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
@@ -11,9 +10,10 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" description={data.site.siteMetadata.description} />
-      <StyledHero home img={data.homeImage.childImageSharp.fluid}>
+      {/* <StyledHero home img={data.homeImage.childImageSharp.fluid}>
         <Banner title={data.site.siteMetadata.title} info="hero-title"></Banner>
-      </StyledHero>
+      </StyledHero> */}
+      <StyledHero home img={data.homeImage.childImageSharp.fluid} />
       <Services />
       <ProjectWithUs />
     </Layout>

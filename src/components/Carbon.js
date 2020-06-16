@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useMemo } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 const CarbonBadge = () => {
   const [hasMounted, setHasMounted] = useState(false)
@@ -74,7 +73,6 @@ const CarbonWrapper = styled.a`
     margin: 0 auto;
 
     span {
-
       background: ${props => props.theme.mainBlack};
       border: 2px solid ${props => props.theme.ecoGreen};
       border-top-left-radius: 5px;

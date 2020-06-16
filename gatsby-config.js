@@ -20,7 +20,9 @@ module.exports = {
     siteUrl: "https://gatsby-contentful-portfolio-blog.netlify.app/",
   },
   plugins: [
+    // "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-preact",
+    "gatsby-plugin-typescript",
     "gatsby-plugin-preload-link-crossorigin",
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-react-helmet`,
@@ -30,7 +32,7 @@ module.exports = {
       options: {
         name: `images`,
         // eslint-disable-next-line
-        path: `${__dirname}/static/images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -55,15 +57,7 @@ module.exports = {
         display: `standalone`,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-subfont`,
-    //   options: {
-    //     silent: true,
-    //     fallback: false,
-    //     inlineFonts: true,
-    //   },
-    // },
     `gatsby-plugin-offline`,
-    // `gatsby-plugin-no-javascript`,
+    "gatsby-plugin-no-javascript",
   ],
 }
