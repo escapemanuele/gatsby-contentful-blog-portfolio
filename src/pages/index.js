@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Banner from "../components/Banner"
 import Services from "../components/Home/Services"
 import StyledHero from "../components/StyledHero"
 import { graphql } from "gatsby"
