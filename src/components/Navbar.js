@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "./Image"
 import { FaAlignRight } from "react-icons/fa"
@@ -6,13 +6,7 @@ import links from "../constants/links"
 import { NavbarWrapper } from "../css"
 
 const Navbar = () => {
-  const [isOpen, setNav] = useState(false)
-
   const data = useStaticQuery(getLogo)
-
-  const toggleNav = () => {
-    setNav(!isOpen)
-  }
 
   return (
     <NavbarWrapper>
@@ -25,14 +19,14 @@ const Navbar = () => {
           <button
             type="button"
             className="logo-btn"
-            onClick={toggleNav}
+            // onClick={toggleNav}
             aria-label="Open Menu"
             data-cy="mobile-button"
           >
             <FaAlignRight className="logo-icon" />
           </button>
         </div>
-        <ul className={isOpen ? `nav-links show-nav` : `nav-links`}>
+        <ul className="nav-links">
           {links.map((item, index) => {
             return (
               <li key={index}>

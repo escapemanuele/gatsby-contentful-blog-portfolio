@@ -24,6 +24,13 @@ const Layout = ({ children }) => {
         `}
       />
       <Script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer />
+      <Script
+          innerHTMLCode={`
+            document.querySelector('.logo-btn').addEventListener('click', function (){
+              document.querySelector('.nav-links').classList.toggle("show-nav");
+            })
+          `}
+        />
     </main>
   )
 }
