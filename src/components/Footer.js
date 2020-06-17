@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import Loadable from "@loadable/component"
 import links from "../constants/links"
 import { FooterWrapper } from "../css"
-import CarbonBadge from "./Carbon"
 
 const Footer = () => {
   const linkProfilo =
@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="created">
         Created by <a href={linkProfilo}>Emanuele Buccelli</a>
       </div>
-      <CarbonBadge />
+      <div id="wcb" class="wcb carbonbadge wcb-d"></div>
     </FooterWrapper>
   )
 }

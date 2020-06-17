@@ -23,8 +23,6 @@ module.exports = {
     // "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-preact",
     "gatsby-plugin-typescript",
-    "gatsby-plugin-preload-link-crossorigin",
-    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
