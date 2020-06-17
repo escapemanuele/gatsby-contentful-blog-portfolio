@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Script from './components/Script'
+import Script from "./components/Script"
 
 export default function HTML(props) {
   return (
@@ -23,7 +23,7 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
         <Script
-            innerHTMLCode={`
+          innerHTMLCode={`
                 function appendScript(url) {
                     var element = document.createElement("script");
                     element.src = url;
@@ -42,10 +42,9 @@ export default function HTML(props) {
 
                 window.addEventListener('load', () => quicklink.listen());
             `}
+            defer
         />
-        <script>
-            
-        </script>
+        <script></script>
       </body>
     </html>
   )
