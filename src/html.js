@@ -42,7 +42,7 @@ export default function HTML(props) {
 
                 window.addEventListener('load', () => quicklink.listen());
             `}
-            defer
+          defer
         />
         <script></script>
       </body>

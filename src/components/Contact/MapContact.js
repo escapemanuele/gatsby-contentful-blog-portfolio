@@ -1,6 +1,7 @@
 import React from "react"
 import Title from "../Title"
 import styled from "styled-components"
+import Script from "../Script"
 
 const MapContact = () => {
   return (
@@ -8,6 +9,7 @@ const MapContact = () => {
       <Title title="Join us" subtitle="in studio" />
       <MapWrapper>
         <iframe
+          id="maps_frame"
           title="change-maps"
           frameBorder="0"
           width="100%"
