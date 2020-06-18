@@ -32,6 +32,7 @@ export default function HTML(props) {
 
                 function downloadJSAtOnload() {
                     appendScript("https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js")
+                    window.addEventListener('load', () => quicklink.listen());
                     appendScript("https://unpkg.com/website-carbon-badges@^1/b.min.js")
                 }
                 if (window.addEventListener)
@@ -39,8 +40,6 @@ export default function HTML(props) {
                 else if (window.attachEvent)
                     window.attachEvent("onload", downloadJSAtOnload);
                 else window.onload = downloadJSAtOnload;
-
-                window.addEventListener('load', () => quicklink.listen());
             `}
           defer
         />

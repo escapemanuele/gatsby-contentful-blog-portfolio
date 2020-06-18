@@ -1,5 +1,5 @@
 import React from "react"
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import { ThemeProvider } from "styled-components"
@@ -20,7 +20,8 @@ const Layout = ({ children }) => {
             document.querySelector('.logo-btn').addEventListener('click', function (){
               document.querySelector('.nav-links').classList.toggle("show-nav");
             })
-          `} />
+          `}
+      />
     </main>
   )
 }
