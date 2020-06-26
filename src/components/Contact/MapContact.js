@@ -1,7 +1,6 @@
 import React from "react"
 import Title from "../Title"
 import styled from "styled-components"
-import Script from "../Script"
 
 const MapContact = () => {
   return (

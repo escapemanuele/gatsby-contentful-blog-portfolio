@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import Loadable from "@loadable/component"
 import links from "../constants/links"
 import { FooterWrapper } from "../css"
 

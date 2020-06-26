@@ -30,20 +30,32 @@ export default function HTML(props) {
                     document.body.appendChild(element);
                 }
 
-                function downloadJSAtOnload() {
-                    appendScript("https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js")
-                    window.addEventListener('load', () => quicklink.listen());
+                function downloadWhatIsNeeded() {
                     appendScript("https://unpkg.com/website-carbon-badges@^1/b.min.js")
+                    // if ('serviceWorker' in navigator) {
+                    //   navigator.serviceWorker.register('/sw.js');
+                    // }
                 }
-                if (window.addEventListener)
-                    window.addEventListener("load", downloadJSAtOnload, false);
+
+                if (window.addEventListener) {
+                  window.addEventListener("load", downloadWhatIsNeeded, false);
+                }
                 else if (window.attachEvent)
-                    window.attachEvent("onload", downloadJSAtOnload);
-                else window.onload = downloadJSAtOnload;
+                    window.attachEvent("onload", downloadWhatIsNeeded);
+                else window.onload = downloadWhatIsNeeded;
             `}
           defer
         />
-        <script></script>
+
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js"
+          defer
+        />
+        <Script
+          innerHTMLCode={`
+            window.addEventListener('load', () => quicklink.listen());
+          `}
+        />
       </body>
     </html>
   )
