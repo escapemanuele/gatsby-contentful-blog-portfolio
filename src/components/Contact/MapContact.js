@@ -8,6 +8,7 @@ const MapContact = () => {
       <Title title="Join us" subtitle="in studio" />
       <MapWrapper>
         <iframe
+          id="maps_frame"
           title="change-maps"
           frameBorder="0"
           width="100%"
