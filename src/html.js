@@ -48,7 +48,7 @@ export default function HTML(props) {
         />
 
         <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.0.0-alpha/quicklink.umd.js"
+          src="quicklink.js"
           defer
         />
         <Script

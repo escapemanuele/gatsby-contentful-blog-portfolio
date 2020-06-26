@@ -1,5 +1,5 @@
 const path = require("path")
-const DashboardPlugin = require('webpack-dashboard/plugin')
+const DashboardPlugin = require("webpack-dashboard/plugin")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -96,8 +96,6 @@ exports.onCreateWebpackConfig = ({
   actions,
 }) => {
   actions.setWebpackConfig({
-    plugins: [
-      new DashboardPlugin()
-    ]
+    plugins: [new DashboardPlugin()],
   })
 }
