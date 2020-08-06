@@ -51,7 +51,7 @@ const getLogo = graphql`
     logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
         fixed(width: 118, height: 78) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_noBase64
         }
       }
     }
