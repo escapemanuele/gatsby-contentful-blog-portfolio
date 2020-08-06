@@ -47,10 +47,7 @@ export default function HTML(props) {
           defer
         />
 
-        <Script
-          src="quicklink.js"
-          defer
-        />
+        <Script src="quicklink.js" defer />
         <Script
           innerHTMLCode={`
             window.addEventListener('load', () => quicklink.listen());
