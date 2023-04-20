@@ -38,7 +38,7 @@
     "gatsby-plugin-preload-fonts": "^1.2.10",
     "gatsby-plugin-preload-link-crossorigin": "^1.0.2",
     "gatsby-plugin-react-helmet": "^3.1.4",
-    "gatsby-plugin-sharp": "^2.2.12",
+    "gatsby-plugin-sharp": "^4.25.1",
     "gatsby-plugin-styled-components": "^3.1.2",
     "gatsby-plugin-webpack-entry": "^1.0.1",
     "gatsby-source-contentful": "^2.1.78",
